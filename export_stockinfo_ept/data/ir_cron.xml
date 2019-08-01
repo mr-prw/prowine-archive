@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="export_stockinfo_report_cron" model="ir.cron">
+			<field name="name">Export Product Stock in Excel</field>
+			<field eval="False" name="active" />
+			<field name="user_id" ref="base.user_root" />
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="state">code</field>
+			<field name="doall">False</field>
+			<field eval="ref('model_export_stockinfo_report_ept')" name="model_id" />
+			<field name="code">model.auto_generator_export_stockinfo_report()</field>
+		</record>
+
+	</data>
+</odoo>

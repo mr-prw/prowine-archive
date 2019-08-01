@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<record id="action_forecast_sales_rule_add_product" model="ir.actions.act_window">
+			<field name="name"> Forecast sale rule add product wizard</field>
+			<field name="res_model">forecast.sale.rule.add.product</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+		<record id="view_forecast_sales_rule_add_product" model="ir.ui.view">
+			<field name="name">Forecast sale rule add product wizard form</field>
+			<field name="model">forecast.sale.rule.add.product</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<group>
+							<field name="sale_ratio" />
+						</group>
+					</group>
+					<field name="product_ids" widget="Many2one"
+						domain="[('id','not in',context.get('products_list'))]" />
+
+					<footer>
+						<button name="add_products" string="Add" type="object"
+							class="oe_highlight" />
+						or
+						<button string="_Close" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+</odoo>

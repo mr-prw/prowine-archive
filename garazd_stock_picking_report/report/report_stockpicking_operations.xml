@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="report_picking_inherit" inherit_id="stock.report_picking">
+        <xpath expr="//table[2]//thead//tr//th[2]" position="after">
+            <th width="10%">Reserved</th>
+        </xpath>
+        <xpath expr="//table[2]//tbody//tr//td[2]" position="after">
+            <td><span t-esc="'%.1f'% move.reserved_availability"/></td>
+        </xpath>
+    </template>
+
+</odoo>
