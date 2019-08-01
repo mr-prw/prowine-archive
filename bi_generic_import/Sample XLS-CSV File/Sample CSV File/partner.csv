@@ -1,0 +1,4 @@
+NAME,TYPE,PARENT,STREET,STREET2,CITY,STATE,ZIP,COUNTRY,WEBSITE,PHONE,MOBILE,EMAIL,CUSTOMER,VENDOR,SALESPERSON,INTERNAL REFERENCE,CUSTOMER PAYMENT TERMS,VENDOR PAYMENT TERMS
+chirag,person,Agrolait,Sardarnagar,Street2,Ahemdabad,Gujarat,128457,India,abc.com,1234567,9874563210,aaa@gmail.com,1,0,Administrator,123456,30 Net Days,15 Days
+hiren,company,,Iscon,Temple,Ahemdabad,Gujarat,128457,India,xyz.com,1234567,9874563210,aaa@gmail.com,2,1,Administrator,123456,30 Net Days,15 Days
+
