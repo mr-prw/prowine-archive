@@ -2,3 +2,8 @@
 	path = OCA/web
 	url = git@github.com:OCA/web.git
 	branch = 11.0
+
+[submodule "OCA/account-financial-tools"]
+	path = OCA/account-financial-tools
+	url = git@github.com:OCA/account-financial-tools.git
+	branch = 11.0
