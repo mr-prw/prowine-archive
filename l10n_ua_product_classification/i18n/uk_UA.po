@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ua_product_classification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-26 13:47+0000\n"
+"PO-Revision-Date: 2018-02-26 13:47+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ua_product_classification
+#: model:ir.ui.view,arch_db:l10n_ua_product_classification.product_classification_form
+msgid "<span class=\"o_stat_text\">Childs</span>"
+msgstr "<span class=\"o_stat_text\">Підкатегорія</span>"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_childs
+msgid "Childs"
+msgstr "Підкатегорія"
+
+#. module: l10n_ua_product_classification
+#: model:ir.actions.act_window,name:l10n_ua_product_classification.product_classification_action_form
+msgid "Childs item"
+msgstr "Childs item"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_name
+msgid "Code"
+msgstr "Код"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_description
+msgid "Description"
+msgstr "Опис"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_excise_code
+msgid "Excise code"
+msgstr "Акцизний код"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_id
+msgid "ID"
+msgstr "ІД"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_item_count
+msgid "Item Count"
+msgstr "Кількість елементів"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification___last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_main_name
+msgid "Main Name"
+msgstr "Головна назва"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_code
+msgid "Name"
+msgstr "Назва"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model.fields,field_description:l10n_ua_product_classification.field_product_classification_parent_id
+#: model:ir.ui.view,arch_db:l10n_ua_product_classification.view_product_classification_filter
+msgid "Parent"
+msgstr "Батьківський"
+
+#. module: l10n_ua_product_classification
+#: model:ir.ui.view,arch_db:l10n_ua_product_classification.view_product_classification_filter
+msgid "Product Classification"
+msgstr "Классификация продукции"
+
+#. module: l10n_ua_product_classification
+#: model:ir.actions.act_window,name:l10n_ua_product_classification.action_product_classification_tree
+#: model:ir.ui.menu,name:l10n_ua_product_classification.product_classification_menu
+#: model:ir.ui.view,arch_db:l10n_ua_product_classification.product_classification_form
+#: model:ir.ui.view,arch_db:l10n_ua_product_classification.product_classification_tree
+msgid "Ukrainian Classifier of Foreign Trade"
+msgstr "Український класифікатор товарів ЗЕД"
+
+#. module: l10n_ua_product_classification
+#: model:ir.model,name:l10n_ua_product_classification.model_product_classification
+msgid "product.classification"
+msgstr "product.classification"
+

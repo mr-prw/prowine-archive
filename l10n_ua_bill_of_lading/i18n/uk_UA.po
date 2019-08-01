@@ -1,0 +1,695 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ua_bill_of_lading
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-22 13:03+0000\n"
+"PO-Revision-Date: 2018-03-22 13:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "1 copy - the sender <br/>\n"
+"                                    2 copy - the recipient <br/>\n"
+"                                    3 copy - the carrier <br/>\n"
+"                                    4 copy - the carrier <br/>"
+msgstr "1 прим. - відправнику <br/>\n"
+"                                    2 прим. - одержувачу <br/>\n"
+"                                    3 прим. - перевізнику <br/>\n"
+"                                    4 прим. - перевізнику  <br/>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>10</span>"
+msgstr "<span>10</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>11</span>"
+msgstr "<span>11</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>12</span>"
+msgstr "<span>12</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>13</span>"
+msgstr "<span>13</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>14</span>"
+msgstr "<span>14</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>15</span>"
+msgstr "<span>15</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Accepted (responsible person of the consignee)</span>\n"
+"                                    <br/>\n"
+"                                    <span>_________________________________</span>\n"
+"                                    <br/><sub>(Full name, position, signature, seal)</sub>"
+msgstr "<span>Прийняв (відповідальна особа вантажоодержувача)</span>\n"
+"                                        <br/>\n"
+"                                        <span>_________________________________</span>\n"
+"                                        <br/><sub>(П.І.Б., посада, підпис, печатка)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Accepted driver / forwarder</span>\n"
+"                                    <br/>\n"
+"                                    <span>___________________________</span>\n"
+"                                    <br/><sub>(Full name, position, signature, seal)</sub>"
+msgstr "<span>Прийняв водій/експедитор</span>\n"
+"                                        <br/>\n"
+"                                        <span>___________________________</span>\n"
+"                                        <br/><sub>(П.І.Б., посада, підпис)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Gross mass</span>"
+msgstr "<span>Маса брутто, кг</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Hired (responsible shipper)</span>\n"
+"                                    <br/>\n"
+"\n"
+"                                    <span>___________________________</span>\n"
+"                                    <br/><sub>(Full name, position, signature, seal)</sub>"
+msgstr "<span>Здав (відповідальна особа вантажовідправника)</span>\n"
+"                                    <br/>\n"
+"\n"
+"                                    <span>___________________________</span>\n"
+"                                    <br/><sub>(П.І.Б., посада, підпис, печатка)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Load</span>"
+msgstr "<span>Навантаження</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Operation</span>"
+msgstr "<span>Операція</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Signature of responsible person</span>"
+msgstr "<span>Підпис відповідальної особи</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Time</span>"
+msgstr "<span>Час (год., хв.)</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Unloading</span>"
+msgstr "<span>Розвантаження</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Vehicle</span>"
+msgstr "<span>Транспортний засіб</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Wanted driver / forwarder</span>\n"
+"                                    <br/>\n"
+"                                    <span>___________________________</span>\n"
+"                                    <br/><sub>(Full name, position, signature, seal)</sub>"
+msgstr "<span>Здав водій/експедитор</span>\n"
+"                                        <br/>\n"
+"                                        <span>___________________________</span>\n"
+"                                        <br/><sub>(П.І.Б., посада, підпис))</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>arrival</span>"
+msgstr "<span>прибуття</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>idle</span>"
+msgstr "<span>простою</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>retirement</span>"
+msgstr "<span>вибуття</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<span>Сustomer(payer)</span>"
+msgstr "<span>Замовник(платник)</span>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<sub>(Full name)</sub>"
+msgstr "<sub>(Найменування/П.І.Б)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<sub>(Location)</sub>"
+msgstr "<sub>(місцезнаходження)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<sub>(in the words of taxes)</sub>"
+msgstr "<sub>(словами, з урахуванням ПДВ)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "<sub>(make, model, type, registration number)</sub>"
+msgstr "<sub>(марка, модель, тип, реєстраційний номер)</sub>"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Accompanying documents for cargo"
+msgstr "Супровідні документи на вантаж"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_accountant
+msgid "Accountant"
+msgstr "Бухгалтер"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Accountant (shipper's responsible person)"
+msgstr "Бухгалтер (відповідальна особа вантажовідправника)"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_move_amount_total
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Amount Total"
+msgstr "Загальна сума з ПДВ, грн"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_move_amount_untaxed
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Amount Untaxed"
+msgstr "Ціна без ПДВ за одиницю, грн"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_amount_total
+msgid "Amount total"
+msgstr "Загальна сума з ПДВ"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_amount_untaxed
+msgid "Amount untaxed"
+msgstr "Ціна без ПДВ за одиницю"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "BILL OF LADING"
+msgstr "ТОВАРНО-ТРАНСПОРТНА НАКЛАДНА"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.actions.report,name:l10n_ua_bill_of_lading.action_report_stock_picking
+msgid "Bill of Lading"
+msgstr "ТТН"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_trailer_brand
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_vehicle_brand
+msgid "Brand"
+msgstr "Марка"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Car carrier"
+msgstr "Автомобільний перевізник"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_consignee
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Consignee"
+msgstr "Вантажоодержувач"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_consignor
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Consignor"
+msgstr "Вантажовідправник"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Continuation of annex 7"
+msgstr "Продовження додатка 7"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_create_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_customer
+msgid "Customer"
+msgstr "Клієнт"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_display_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_move_documents_with_cargo
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Documents with cargo"
+msgstr "Документи з вантажем"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_driver_id
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Driver"
+msgstr "Водій"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Everything is released in quantity"
+msgstr "Усього відпущено в кількості"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_expeditor_id
+msgid "Expeditor"
+msgstr "Експедитор"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_text_gross_mass
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Gross mass"
+msgstr "Маса брутто, т"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_id
+msgid "ID"
+msgstr "ІД"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "INFORMATION ABOUT CARGO"
+msgstr "ВІДОМОСТІ ПРО ВАНТАЖ"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_fleet_vehicle
+msgid "Information on a vehicle"
+msgstr "Information on a vehicle"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg___last_update
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type___last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_brand_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_brand_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_write_date
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_leave_allowed
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Leave allowed"
+msgstr "Відпуск дозволив"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "License:"
+msgstr "Ліцензія:"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Load point"
+msgstr "Пункт навантаження"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_model_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_trailer_model
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_model_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_vehicle_model
+msgid "Model"
+msgstr "Модель"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_name
+msgid "Name"
+msgstr "Назва"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Number of eats"
+msgstr "Кількість місць"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_move_total_number_of_seats
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_total_number_of_seats
+msgid "Number of seats"
+msgstr "Number of seats"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Number, registered in the Uniform Register of Commodity- <br/>\n"
+"                                        transport bill of lading for moving alcohol <br/>\n"
+"                                        ethyl alcohol and alcoholic beverages"
+msgstr "Номер, зареєстрований в Єдиному реєстрі товарно- <br/>\n"
+"                                        транспортних накладних на переміщення спирту <br/>\n"
+"                                        етилового та алкогольних напоїв"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "ON THE MOVEMENT ALCOHOLIC BEVERAGES"
+msgstr "на переміщення алкогольних напоїв "
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Product"
+msgstr "Товар"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_state_name
+msgid "State"
+msgstr "Область"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_state_id
+msgid "State (Сorresponds/No corresponds)"
+msgstr "State (Сorresponds/No corresponds)"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_stock_move
+msgid "Stock Move"
+msgstr "Переміщення запасів"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "TRANSPORTATION AND LOADING OPERATIONS"
+msgstr "ВАНТАЖНО-РОЗВАНТАЖУВАЛЬНІ ОПЕРАЦІЇ"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.stock_view_picking_form
+msgid "TTN"
+msgstr "ТТН"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_total_taxes
+msgid "Taxes"
+msgstr "Податки"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "The reverse side"
+msgstr "Зворотня сторона"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Total amount"
+msgstr "Загальна сума"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_text_amount_total
+msgid "Total amount in word"
+msgstr "Всього словами"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_fleet_vehicle_is_trailer
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_fleet_trailer_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_trailer_id
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Trailer"
+msgstr "Причіп/напівпричіп"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_reg_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_trailer_reg
+msgid "Trailer registration"
+msgstr "Реєстрація причіпів"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_stock_picking
+msgid "Transfer"
+msgstr "Переміщення"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Transport services provided by road carriers"
+msgstr "Транспортні послуги, які надаються автомобільним перевізником"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_trailer_type
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_trailer_type_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_type_name
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_vehicle_type
+msgid "Type"
+msgstr "Тип"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_move_type_of_packaging
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Type of packaging"
+msgstr "Тип пакування"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_type_transportation_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_type_transportation_name
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Type of transportation"
+msgstr "Вид перевезень"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Unit of measurement"
+msgstr "Одиниця виміру"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Unloading point"
+msgstr "Пункт розвантаження"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "VAT:"
+msgstr "ІПН:"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_fleet_vehicle_id
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_vehicle_id
+msgid "Vehicle"
+msgstr "Транспортний засіб"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_reg_name
+msgid "Vehicle reg"
+msgstr "Реєстраційний номер"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_vehicle_vehicle_reg
+msgid "Vehicle registration"
+msgstr "Реєстраційний номер"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_consignee_full_name
+msgid "consignee"
+msgstr "консигнант"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model.fields,field_description:l10n_ua_bill_of_lading.field_stock_picking_consignor_full_name
+msgid "consignor"
+msgstr "консигнатор"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "gross mass"
+msgstr "масса брутто"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "kg, got a driver / forwarder"
+msgstr "кг, отримав водій/експедитор"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_state
+msgid "state"
+msgstr "state"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_trailer
+msgid "trailer"
+msgstr "Вантажівка"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_trailer_brand
+msgid "trailer.brand"
+msgstr "trailer.brand"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_trailer_model
+msgid "trailer.model"
+msgstr "trailer.model"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_trailer_reg
+msgid "trailer.reg"
+msgstr "trailer.reg"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_trailer_type
+msgid "trailer.type"
+msgstr "trailer.type"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_type_transportation
+msgid "type.transportation"
+msgstr "type.transportation"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_vehicle
+msgid "vehicle"
+msgstr "Авто"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_vehicle_brand
+msgid "vehicle.brand"
+msgstr "vehicle.brand"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_vehicle_model
+msgid "vehicle.model"
+msgstr "vehicle.model"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_vehicle_reg
+msgid "vehicle.reg"
+msgstr "vehicle.reg"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.model,name:l10n_ua_bill_of_lading.model_vehicle_type
+msgid "vehicle.type"
+msgstr "vehicle.type"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "ЄДРПОУ:"
+msgstr "ЄДРПОУ:"
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "Аpproved by <br/>\n"
+"                                    Order of the Ministry of Transport and Communications <br/>\n"
+"                                    communication of Ukraine <br/>\n"
+"                                    28.04.2005 N 154 <br/>\n"
+"                                    Form № 1-TN /alcoholic drinks/"
+msgstr "ЗАТВЕРДЖЕНО <br/>\n"
+"                                    Наказ Міністерства транспорту та <br/>\n"
+"                                    зв'язку України <br/>\n"
+"                                    28.04.2005 N 154 <br/>\n"
+"                                    Форма N 1-ТН /алкогольні напої/ "
+
+#. module: l10n_ua_bill_of_lading
+#: model:ir.ui.view,arch_db:l10n_ua_bill_of_lading.bill_of_lading_report
+msgid "у т.ч. ПДВ та АЗ"
+msgstr "у т.ч. ПДВ та АЗ"
+

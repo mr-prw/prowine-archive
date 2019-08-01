@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='stock_view_picking_form'>
+            <field name='name'>stock_view_picking_form</field>
+            <field name='model'>stock.picking</field>
+            <field name='inherit_id' ref='stock.view_picking_form'/>
+            <field name='arch' type='xml'>
+                <xpath expr="//sheet/notebook/page[@name='extra']" position="after">
+                    <page string="TTN" name="TTN">
+                        <group>
+                            <group>
+                                <field name="date"/>
+                                <field name="fleet_vehicle_id"/>
+                                <field name="fleet_trailer_id" domain="[('is_trailer','=',True)]"/>
+                                <field name="type_transportation_id"/>
+                                <field name="expeditor_id" domain="[('is_company','=',True)]"/>
+                                <field name="driver_id"/>
+                                <field name="customer"/>
+                                <field name="consignor"/>
+                                <field name="consignee"/>
+                                <field name="accountant"/>
+                                <field name="leave_allowed"/>
+                            </group>
+                            <group>
+                                <field name="state_id"/>
+                                <field name="text_amount_total" invisible="1"/>
+                                <field name="consignor_full_name" invisible="1"/>
+                                <field name="consignee_full_name" invisible="1"/>
+                                <field name="total_taxes" invisible="1"/>
+                                <field name="total_number_of_seats" invisible="1"/>
+                                <field name="text_gross_mass" invisible="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='move_lines']/tree/field[@name='product_id']" position="after">
+                    <field name='amount_untaxed' readonly="True"/>
+                    <field name="amount_total" readonly="True"/>
+                    <field name="type_of_packaging"/>
+                    <field name="documents_with_cargo"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

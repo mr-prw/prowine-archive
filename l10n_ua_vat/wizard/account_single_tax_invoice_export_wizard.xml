@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_single_tax_invoice_export" model="ir.ui.view">
+            <field name="name">account.taxinvoice.export_single.form</field>
+            <field name="model">account.taxinvoice.export_single</field>
+            <field name="arch" type="xml">
+                <form string="Експорт податкової накладної">
+                    <field name="fname" invisible="1"/>
+                    <field name="state" invisible="1"/>
+                    <div states="draft">
+                        <h2>Вивантаження в xml</h2>
+                        <p>Інформація, що буде включена в xml файл.</p>
+                        Номер ПН: <field name="pn_numb" readonly="1" class="oe_inline"/>
+                    </div>
+                    <div states="download">
+                        <h2>Вивантаження в xml</h2>
+                        <p>Ось ваші накладні: <field name="fdata" readonly="1" filename="fname"/></p>
+                        <p>Їх можна імпортувати у програму здачі звітності.</p>
+                    </div>
+                    <footer>
+                        <group states="draft">
+                            <button name="single_taxinvoice_export"
+                                string="Створити XML"
+                                type="object"
+                                default_focus="1"
+                                class="btn-primary"/>
+                            <button string="Скасувати"
+                                class="btn-default"
+                                special="cancel" />
+                        </group>
+                        <group states="download">
+                            <button string="Закрити"
+                                special="cancel"
+                                class="btn-default"/>
+                        </group>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_account_single_tax_invoice_export" model="ir.actions.act_window">
+            <field name="name">Вивантаження податкової накладної</field>
+            <field name="res_model">account.taxinvoice.export_single</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="view_account_single_tax_invoice_export"/>
+           <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>
