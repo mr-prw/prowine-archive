@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_partner_form_inherit_nova_poshta_base" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.nova.poshta.base</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']//group" position="inside">
+                <group string="Nova Poshta" name="nova_poshta">
+                    <field name="np_city_id"
+                           options="{'no_open': True,'no_create': True}" />
+                    <field name="np_city_ref" invisible="True" />
+                    <field name="np_warehouse_id"
+                           domain="[('city_ref', '=', np_city_ref)]"
+                           options="{'no_open': True,'no_create': True}" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
