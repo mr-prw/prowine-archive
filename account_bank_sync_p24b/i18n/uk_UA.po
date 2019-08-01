@@ -1,0 +1,361 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_bank_sync_p24b
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-20 15:30+0000\n"
+"PO-Revision-Date: 2016-06-20 18:32+0300\n"
+"Last-Translator: Bogdan Lisnenko <lem8r.ka11a@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 1.8.5\n"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:375
+#, python-format
+msgid "%d transactions had already beenimported and were ignored."
+msgstr "%d платежів раніше було імпортовано тому  вони пропущені."
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "01-02-03-04"
+msgstr "01-02-03-04"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:379
+#, python-format
+msgid "1 transaction had already been imported and was ignored."
+msgstr "1 платіж раніше було імпортовано тому  його пропущено."
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:381
+#, python-format
+msgid "Already imported items"
+msgstr "Вже імпортовані раніше"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_bank_acc
+msgid "Bank Account Number"
+msgstr "Номер банківського рахунку"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_journal_id
+msgid "Bank Journal for statement import"
+msgstr "Банківський журнал для імпорту виписки"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_create_uid
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_create_date
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_display_name
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Enter OTP"
+msgstr "Введіть OTP-пароль з СМС"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.view_account_payment_form_inherited_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.view_account_payment_invoice_form_inherited_p24b
+msgid "Export to Privat24"
+msgstr "Експорт у Приват24"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Failure"
+msgstr "Невдача"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Failure!"
+msgstr "Невдача!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_payment_hide_p24b
+msgid "Hide p24b"
+msgstr "Приховати П24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_id
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_id
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_phone_id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_statement_import
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_sync
+msgid "Import Bank Statement"
+msgstr "Імпортувати виписку"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Import Statement"
+msgstr "Імпортувати виписку"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_journal
+msgid "Journal"
+msgstr "Журнал"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_journal_id
+msgid "Journal id"
+msgstr "ID журналу"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync___last_update
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel___last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_write_uid
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_write_date
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_login
+msgid "Login"
+msgstr "Логін"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_memo
+msgid "Memo"
+msgstr "Призначення платежу"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_timeout
+msgid "Network delay in sec before exception"
+msgstr "Затримка мережі в секундах перед виключенням"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Next"
+msgstr "Далі"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Nothing to do"
+msgstr "Немає що робити"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_otp
+msgid "OTP"
+msgstr "OTP"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_journal_dashboard_view_inherit
+msgid "P24B Sync"
+msgstr "Синхронізація П24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_partner_id
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_passwd
+msgid "Password"
+msgstr "Пароль"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_amount
+msgid "Payment Amount"
+msgstr "Сума оплати"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_payment_date
+msgid "Payment Date"
+msgstr "Дата оплати"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_payment
+msgid "Payments"
+msgstr "Платежі"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_name
+msgid "Phone number"
+msgstr "Номер телефону"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Priovide Login and Password"
+msgstr "Введіть логін та пароль від Приват24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_journal_p24_login
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_login
+msgid "Privat24 Login"
+msgstr "Логін Приват24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_journal_p24_passwd
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_passwd
+msgid "Privat24 Password"
+msgstr "Пароль Приват24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.actions.act_window,name:account_bank_sync_p24b.p24b_action_account_bank_sync
+msgid "Privat24 Sync"
+msgstr "Синхронізація П24"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_journal.py:13
+#, python-format
+msgid "Privat24Business Import"
+msgstr "Онлайн синхронізація з Приват24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_sync_phone_sel
+msgid "Privat24Business phone list"
+msgstr "Privat24Business phone list"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "PrivatBank Online Sync"
+msgstr "Онлайн синхронізація з ПриватБанком"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_journal.py:22
+#: code:addons/account_bank_sync_p24b/models/account_payment.py:35
+#, python-format
+msgid "Provide account number on bank journal!"
+msgstr "Введіть номер рахунку в налаштуваннях журналу!"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_payment.py:47
+#, python-format
+msgid "Provide partner bank info!"
+msgstr "Введіть інформацію про банк партнера!"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_payment.py:44
+#, python-format
+msgid "Provide partner bank!"
+msgstr "Введіть інформацію про банк партнера!"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_payment.py:49
+#, python-format
+msgid "Provide partner code!"
+msgstr "Введіть ЄДРПОУ партнера!"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_payment.py:41
+#, python-format
+msgid "Provide partner!"
+msgstr "Введіть партнера!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Provide your OTP"
+msgstr "Введіть OTP-пароль"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Provide your Privat24 login and Password"
+msgstr "Введіть логін та пароль від Приват24"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel
+msgid "Select Phone"
+msgstr "Оберіть номер телефону"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Select device"
+msgstr "Оберіть телефон"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Select phone to send OTP"
+msgstr "Оберіть телефон для відправки паролю"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Send Payment"
+msgstr "Надіслати платіж"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_session_id
+msgid "Session token"
+msgstr "Session token"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_state
+msgid "State to control wizard form"
+msgstr "State to control wizard form"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Success"
+msgstr "Успіх"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Success!"
+msgstr "Успіх!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_client_id
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_client_secret
+msgid "Taken from developer console"
+msgstr "Taken from developer console"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_task
+msgid "Task to sync with bank eg statement or Payment"
+msgstr "Task to sync with bank eg statement or Payment"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_client_id
+msgid "client_id"
+msgstr "client_id"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_client_secret
+msgid "client_secret"
+msgstr "client_secret"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_session_id
+msgid "session_id"
+msgstr "session_id"
