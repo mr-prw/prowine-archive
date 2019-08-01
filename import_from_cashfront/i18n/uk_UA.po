@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* import_from_cachfront
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-31 16:46+0000\n"
+"PO-Revision-Date: 2018-01-31 16:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_import
+msgid "Cancel"
+msgstr "Скасувати"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: import_from_cachfront
+#: selection:import.cachfront,state:0
+msgid "Done"
+msgstr "Опубліковано"
+
+#. module: import_from_cachfront
+#: selection:import.cachfront,state:0
+msgid "Draft"
+msgstr "Нова"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_fname
+msgid "File Name"
+msgstr "Назва файлу"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_fdata
+msgid "File data"
+msgstr "Дані файлу"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_id
+msgid "ID"
+msgstr "ІД"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_import
+msgid "Import"
+msgstr "Імпорт"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_form
+msgid "Import Sales Orders"
+msgstr "Імпорт проданих товарів"
+
+#. module: import_from_cachfront
+#: model:ir.actions.act_window,name:import_from_cachfront.import_pos_order_import_action
+msgid "Import from CachFront"
+msgstr "Імпорт з CachFront"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_import
+msgid "Import sold items with CashFront"
+msgstr "Імпорт проданих товарів з CashFront"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront___last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: import_from_cachfront
+#: code:addons/import_from_cachfront/wizard/pos_order_import.py:36
+#, python-format
+msgid "Select the file to import"
+msgstr "Виберіть файл"
+
+#. module: import_from_cachfront
+#: model:ir.model.fields,field_description:import_from_cachfront.field_import_cachfront_state
+msgid "State"
+msgstr "Область"
+
+#. module: import_from_cachfront
+#: model:ir.model,name:import_from_cachfront.model_import_cachfront
+msgid "import.cachfront"
+msgstr "import.cachfront"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_import
+msgid "txt"
+msgstr "txt"
+
+#. module: import_from_cachfront
+#: model:ir.ui.view,arch_db:import_from_cachfront.view_pos_order_import
+msgid "Сhoose file with items:"
+msgstr "Виберіть файл з товарами:"
+
