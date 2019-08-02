@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report id="export_stockinfo_reprot_pdf_action" 
+				model="export.stockinfo.report.ept"
+				string="Product Stock Info" 
+				report_type="qweb-pdf"
+				name="export_stockinfo_ept.export_stockinfo_report_pdf_ept" 
+				file="export_stockinfo_ept.export_stockinfo_report_pdf_ept" />
+	</data>
+</odoo>

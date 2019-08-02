@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_journal_form_inherited_p24b" model="ir.ui.view">
+            <field name="name">account.journal.form.inherited.p24b</field>
+            <field name="model">account.journal</field>
+            <field name="inherit_id" ref="account.view_account_journal_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bank_id']" position="after">
+                    <field name="p24_login"
+                           attrs="{'invisible': [('bank_statements_source', '!=', 'p24b_import')]}"/>
+                    <field name="p24_passwd"
+                           password="True"
+                           attrs="{'invisible': [('bank_statements_source', '!=', 'p24b_import')]}"/>
+                    <field name="client_id"
+                           attrs="{'invisible': [('bank_statements_source', '!=', 'p24b_import')],
+                                   'required': [('bank_statements_source', '=', 'p24b_import')]}"
+                           groups="base.group_no_one"/>
+                    <field name="client_secret"
+                           password="True"
+                           attrs="{'invisible': [('bank_statements_source', '!=', 'p24b_import')],
+                                   'required': [('bank_statements_source', '=', 'p24b_import')]}"
+                           groups="base.group_no_one"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

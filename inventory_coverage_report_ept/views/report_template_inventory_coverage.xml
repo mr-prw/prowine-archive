@@ -1,0 +1,130 @@
+<odoo>
+
+	<template id="inventorycoverage_doc">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+	 		    <t t-call="web.internal_layout">
+			     	<t t-set="doc" t-value="doc.with_context({'lang':user.lang})"/>
+						<div class="page">
+							<h3  class="text-center mb32">Product &amp; Warehouse wise Inventory Coverage<t t-if="doc.show_products != 'all'"> (<span t-field="doc.show_products"></span>)</t></h3>
+							<div class="text-center mb32">
+								<h4>Date: <span t-esc="datetime.date.today()"/> To <span t-esc="datetime.date.today() + relativedelta(days=doc.inventory_analysis_of_x_days-1)"/></h4>
+							</div>
+							<t t-set="lines" t-value="doc.product_suggestion_line_ids"/>
+							<t t-if="doc.show_products == 'out_of_stock_product'">
+							  <t t-set="lines" t-value="lines.filtered(lambda line : line.mapped('line_detail_ids').filtered(lambda detail:detail.stock_status == 'out_stock'))"/>
+							</t>
+							<t t-if="doc.show_products == 'in_stock_product'">
+							  <t t-set="lines" t-value="lines.filtered(lambda line : line.mapped('line_detail_ids').filtered(lambda detail:detail.stock_status == 'in_stock'))"/>
+							</t>
+							<table t-if="doc.show_detailed_report" class="table table-bordered text-center" style="table-layout:auto">
+								<t t-set="summary_colspan" t-value="7"/>
+								<t t-if="doc.show_products == 'all' and doc.check_stock_in_other_warehouses" t-set="summary_colspan" t-value="8"/>
+								<t t-elif="doc.show_products != 'all' and not doc.check_stock_in_other_warehouses" t-set="summary_colspan" t-value="6"/>
+                   				<thead>
+	                        		<tr style="background-color:#DDDCDC">
+	                            		<th>No</th>
+	                            		<th>Product</th>
+	                            		<th>Warehouse</th>
+	                            		<th>Current Stock</th>
+	                            		<th>From Date</th>
+	                            		<th>To date</th>
+	                            		<th>Days</th>
+	                            		<th t-if="doc.show_products == 'all'">Stock Status</th>
+	                            		<th>Opening Stock</th>
+	                            		<th>Incoming</th>
+	                            		<th>Average Daily Sale</th>
+	                            		<th>Forecasted Sales</th>
+	                            		<th>Closing Stock</th>
+	                            		<th t-if="doc.check_stock_in_other_warehouses">Available In Warehouse</th>
+	                            		<th t-if="doc.check_stock_in_other_warehouses">Partial Available In Warehouse</th>
+	                        		</tr>
+	                   			</thead>
+                  				<tbody>
+                  					<t t-set="count" t-value="0"/>
+                        			<t t-foreach="lines" t-as="l">
+                        				
+                        				<t t-set="detail_lines" t-value="l.line_detail_ids"/>
+                        				<t t-if="doc.show_products == 'out_of_stock_product'" t-set="detail_lines" t-value="l.line_detail_ids.filtered(lambda d : d.stock_status == 'out_stock')"/>
+                        				<t t-if="doc.show_products == 'in_stock_product'" t-set="detail_lines" t-value="l.line_detail_ids.filtered(lambda d : d.stock_status == 'in_stock')"/>
+										<t t-if="not all(detail_line.stock_status == 'na' for detail_line in detail_lines)">
+											<t t-set="count" t-value="count+1"/>
+	                        				<tr t-foreach="detail_lines" t-as="dl" t-att-style="dl.stock_status == 'out_stock' and doc.show_products == 'all' and 'color:red' or ''">
+	                       						<t t-if="dl.id == detail_lines[0].id">
+	                       							<t t-set="rowspan_count"  t-value="len(detail_lines)+1"/>
+	                        				    	<td style="text-align:center;" t-att-rowspan="rowspan_count" ><span t-esc="count"></span></td>
+	                        				    	<td style="text-align:center;" t-att-rowspan="rowspan_count"><span t-field="dl.product_id"/></td>
+	                        					  	<td style="text-align:center;" t-att-rowspan="rowspan_count"><span t-field="dl.warehouse_id"/></td>
+	                        					  	<td style="text-align:center;"  t-att-rowspan="rowspan_count"><span t-field="l.line_detail_ids[0].opening_stock"/></td>
+	                        				  	</t>
+	                        					<td><span t-field="dl.start_date"></span></td>
+	                        					<td><span t-field="dl.end_date"></span></td>
+	                        					<td><span t-field="dl.days"></span></td>
+	                        					<td t-if="doc.show_products == 'all'"><span t-field="dl.stock_status"></span></td>
+	                        					<td><span t-field="dl.opening_stock"></span></td>
+	                        					<td><span t-field="dl.incoming"></span></td>
+	                        					<td><span t-field="dl.average_daily_sale"></span></td>
+	                        					<td><span t-field="dl.forecast_sales"></span></td>
+	                        					<td><span t-field="dl.closing_stock"></span></td>
+	                        					<td t-if="doc.check_stock_in_other_warehouses"><span t-field="dl.available_in_warehouses"></span></td>
+	                        					<td t-if="doc.check_stock_in_other_warehouses"><span t-field="dl.partial_available_in_warehouses"></span></td>
+	                        				</tr>
+	                        				<tr>
+	                        					<!-- 
+	                        					<td t-att-colspan="summary_colspan"></td>
+	                        					 -->
+	                        					<td></td>
+	                        					<td></td>
+	                        					<td t-if="doc.show_products == 'all'"></td>
+	                        					<td t-if="doc.check_stock_in_other_warehouses"></td>
+	                        					<td t-if="doc.check_stock_in_other_warehouses"></td>
+	                        					<td><strong>Total Coverage Days</strong></td>
+	                        					<td><strong><span t-field="doc.inventory_analysis_of_x_days"></span></strong></td>
+	                        					<td><strong>In Stock Days</strong></td>
+	                        					<td><strong><span t-esc="sum(l.line_detail_ids.filtered(lambda dl:dl.stock_status == 'in_stock').mapped('days'))"></span></strong></td>
+	                        					<td><strong>Total Out Of Stock Days</strong></td>
+	                        					<td><strong><span t-esc="sum(l.line_detail_ids.filtered(lambda dl:dl.stock_status == 'out_stock').mapped('days'))"></span></strong></td>
+	                        				</tr>
+	                        				<tr><td></td></tr>
+                        				</t>
+                               		</t>
+       							</tbody>
+							</table>
+							
+							<table  t-if="not doc.show_detailed_report" class="table table-bordered" style="table-layout:auto">
+								<thead>
+	                        		<tr style="background-color:#DDDCDC">
+	                            		<th>No</th>
+	                            		<th>Product</th>
+	                            		<th>Warehouse</th>
+	                            		<th>Current Stock</th>
+	                            		<th>Incoming</th>
+	                            		<th>Total Coverage Days</th>
+	                            		<th>In Stock Days</th>
+	                            		<th>Out of Stock Days</th>
+	                        		</tr>
+	                   			</thead>
+                  				<tbody>
+                  					<t t-set="count" t-value="0"/>
+                        			<tr t-foreach="lines" t-as="l">
+                        				<t t-if="not all(detail_line.stock_status == 'na' for detail_line in l.line_detail_ids)">
+	                        				<t t-set="count" t-value="count+1"/>
+	                        				<td><span t-esc="count"></span></td>
+	                        				<td><span t-field="l.product_id"/></td>
+	                        				<td><span t-field="l.warehouse_id"/></td>
+	                        				<td><span t-field="l.line_detail_ids[0].opening_stock"/></td>
+	                        				<td><span t-esc="sum(l.line_detail_ids.mapped('incoming'))"></span></td>
+	                        				<td><span t-field="doc.inventory_analysis_of_x_days"></span></td>
+	                        				<td><span t-esc="sum(l.line_detail_ids.filtered(lambda dl:dl.stock_status == 'in_stock').mapped('days'))"></span></td>
+	                        				<td><span t-esc="sum(l.line_detail_ids.filtered(lambda dl:dl.stock_status == 'out_stock').mapped('days'))"></span></td>
+	                        			</t>
+                        			</tr>
+       							</tbody>
+							</table>
+				       	</div>
+		 				<p style="page-break-before:always;"> </p>                   
+					</t>
+				</t>
+		</t>
+	</template>
+</odoo>

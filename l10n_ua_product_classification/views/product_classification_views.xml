@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record id="view_product_classification_filter" model="ir.ui.view">
+            <field name="name">product.classification.filter</field>
+            <field name="model">product.classification</field>
+            <field name="arch" type="xml">
+                <search string="Product Classification">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="excise_code"/>
+                    <filter name="parent_is_not_set" string="Parent" domain="[('parent_id','=', None)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="product_classification_tree" model="ir.ui.view">
+            <field name="name">product.classification.tree</field>
+            <field name="model">product.classification</field>
+            <field name="field_parent">childs</field>
+            <field name="arch" type="xml">
+                <tree string="Ukrainian Classifier of Foreign Trade">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_classification_action_form" model="ir.actions.act_window">
+            <field name="name">Childs item</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_product_classification_filter"/>
+            <field name="view_id" ref="product_classification_tree"/>
+            <field name="domain">[('parent_id','=', active_id)]</field>
+        </record>
+
+        <record id="product_classification_form" model="ir.ui.view">
+            <field name="name">product.classification.form</field>
+            <field name="model">product.classification</field>
+            <field name="arch" type="xml">
+                <form string="Ukrainian Classifier of Foreign Trade">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                         <button name="%(product_classification_action_form)d"
+                                 type="action"
+                                 class="oe_stat_button"
+                                 icon="fa-th-list"
+                                 attrs="{'invisible': [('item_count', '=', 0)]}">
+                             <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_value"><field name="item_count"/></span>
+                                    <span class="o_stat_text">Childs</span>
+                             </div>
+                         </button>
+                     </div>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="description" />
+                                <field name="excise_code"/>
+                                <field name="parent_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_product_classification_tree" model="ir.actions.act_window">
+            <field name="name">Ukrainian Classifier of Foreign Trade</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.classification</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_product_classification_filter"/>
+            <field name="context">{"search_default_parent_is_not_set":1}</field>
+        </record>
+
+        <menuitem id="product_classification_menu"
+                name="Ukrainian Classifier of Foreign Trade"
+                parent="sale.product_menu_catalog"
+                action="action_product_classification_tree"
+                sequence="5"/>
+    </data>
+</odoo>

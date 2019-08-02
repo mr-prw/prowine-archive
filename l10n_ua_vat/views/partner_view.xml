@@ -1,0 +1,18 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<odoo>
+    <data>
+    <record model="ir.ui.view" id="view_partner_form_l2">
+        <field name="name">res.partner.vat.inherit_l2</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+        <data>
+            <xpath expr="//div[@name='vat_info']" position="after">
+                <field name="default_ipn"/>
+                <field name="kod_filii"/>
+            </xpath>
+        </data>
+        </field>
+    </record>
+</data>
+</odoo>

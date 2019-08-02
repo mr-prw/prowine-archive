@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- account.taxinvoice.paymeth -->
+        <record model="account.taxinvoice.paymeth" id="data_ti_paymeth_rr">
+          <field name="name">Оплата з розрахункового рахунку</field>
+        </record>
+	<record model="account.taxinvoice.paymeth" id="data_ti_paymeth_cash">
+          <field name="name">Оплата готівкою</field>
+        </record>
+	<record model="account.taxinvoice.paymeth" id="data_ti_paymeth_barter">
+          <field name="name">Бартер</field>
+        </record>
+    </data>
+</odoo>

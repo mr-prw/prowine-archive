@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="ir_cron_cashfront" model="ir.cron">
+            <field name="name">Import from CashFront</field>
+            <field name="model_id" ref="model_import_cashfront"/>
+            <field name="state">code</field>
+            <field name="code">model._cashfront_import_cron()</field>
+            <field name="interval_number">30</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall" />
+        </record>
+    </data>
+</odoo>

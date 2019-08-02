@@ -1,0 +1,81 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="l10n_ua_vat.export_template">
+<![CDATA[<?xml version='1.0' encoding='windows-1251'?>]]>
+<DECLAR t-att="{'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+                'xsi:noNamespaceSchemaLocation': xsd_ver}">
+  <DECLARHEAD>
+      <TIN><t t-raw="tin"/></TIN>
+      <C_DOC><t t-raw="c_doc"/></C_DOC>
+      <C_DOC_SUB><t t-raw="c_doc_sub"/></C_DOC_SUB>
+      <C_DOC_VER><t t-raw="c_doc_ver"/></C_DOC_VER>
+      <C_DOC_TYPE><t t-raw="c_doc_type"/></C_DOC_TYPE>
+      <C_DOC_CNT><t t-raw="c_doc_cnt"/></C_DOC_CNT>
+      <C_REG><t t-raw="c_reg"/></C_REG>
+      <C_RAJ><t t-raw="c_raj"/></C_RAJ>
+      <PERIOD_MONTH><t t-raw="per_month"/></PERIOD_MONTH>
+      <PERIOD_TYPE><t t-raw="per_type"/></PERIOD_TYPE>
+      <PERIOD_YEAR><t t-raw="per_year"/></PERIOD_YEAR>
+      <C_STI_ORIG><t t-raw="c_sti_orig"/></C_STI_ORIG>
+      <C_DOC_STAN><t t-raw="c_doc_stan"/></C_DOC_STAN>
+      <LINKED_DOCS t-att="['xsi:nil', linked.get('nil', None)]"><t t-raw="linked.get('cnt', None)"/></LINKED_DOCS>
+      <D_FILL><t t-raw="d_fill"/></D_FILL>
+      <SOFTWARE><t t-raw="software"/></SOFTWARE>
+  </DECLARHEAD>
+  <DECLARBODY>
+      <H03 t-att="['xsi:nil', h03.get('nil', None)]"><t t-raw="h03.get('cnt', None)"/></H03>
+      <R03G10S t-att="['xsi:nil', r03g10s.get('nil', None)]"><t t-raw="r03g10s.get('cnt', None)"/></R03G10S>
+      <HORIG1 t-att="['xsi:nil', horig1.get('nil', None)]"><t t-raw="horig1.get('cnt', None)"/></HORIG1>
+      <HTYPR t-att="['xsi:nil', htypr.get('nil', None)]"><t t-raw="htypr.get('cnt', None)"/></HTYPR>
+      <HFILL t-raw="hfill"/>
+      <HNUM t-raw="hnum"/>
+      <HNUM1 t-att="['xsi:nil', hnum1.get('nil', None)]"><t t-raw="hnum1.get('cnt', None)"/></HNUM1>
+      <HNAMESEL><t t-raw="hnamesel"/></HNAMESEL>
+      <HNAMEBUY t-raw="hnamebuy"/>
+      <HKSEL t-raw="hksel"/>
+      <HNUM2 t-att="['xsi:nil', hnum2.get('nil', None)]"><t t-raw="hnum2.get('cnt', None)"/></HNUM2>
+      <HKBUY t-raw="hkbuy"/>
+      <HFBUY t-att="['xsi:nil', hfbuy.get('nil', None)]"><t t-raw="hfbuy.get('cnt', None)"/></HFBUY>
+      <R04G11 t-att="['xsi:nil', r04g11.get('nil', None)]"><t t-raw="r04g11.get('cnt', None)"/></R04G11>
+      <R03G11 t-att="['xsi:nil', r03g11.get('nil', None)]"><t t-raw="r03g11.get('cnt', None)"/></R03G11>
+      <R03G7 t-att="['xsi:nil', r03g7.get('nil', None)]"><t t-raw="r03g7.get('cnt', None)"/></R03G7>
+      <R03G109 t-att="['xsi:nil', r03g109.get('nil', None)]"><t t-raw="r03g109.get('cnt', None)"/></R03G109>
+      <R01G7 t-att="['xsi:nil', r01g7.get('nil', None)]"><t t-raw="r01g7.get('cnt', None)"/></R01G7>
+      <R01G109 t-att="['xsi:nil', r01g109.get('nil', None)]"><t t-raw="r01g109.get('cnt', None)"/></R01G109>
+      <R01G9 t-att="['xsi:nil', r01g9.get('nil', None)]"><t t-raw="r01g9.get('cnt', None)"/></R01G9>
+      <R01G8 t-att="['xsi:nil', r01g8.get('nil', None)]"><t t-raw="r01g8.get('cnt', None)"/></R01G8>
+      <R01G10 t-att="['xsi:nil', r01g10.get('nil', None)]"><t t-raw="r01g10.get('cnt', None)"/></R01G10>
+      <R02G11 t-att="['xsi:nil', r02g11.get('nil', None)]"><t t-raw="r02g11.get('cnt', None)"/></R02G11>
+      <t t-foreach="rxxxxg3s" t-as="g3s">
+      <RXXXXG3S t-att="['ROWNUM', g3s_index + 1]" t-raw="g3s"/></t>
+      <t t-foreach="rxxxxg4" t-as="g4">
+      <RXXXXG4 t-att="{'xsi:nil': g4.get('nil', None), 'ROWNUM': g4_index + 1}"><t t-raw="g4.get('cnt', None)"/></RXXXXG4></t>
+      <t t-foreach="rxxxxg32" t-as="g32">
+      <RXXXXG32 t-att="{'xsi:nil': g32.get('nil', None), 'ROWNUM': g32_index + 1}"><t t-raw="g32.get('cnt', None)"/></RXXXXG32></t>
+      <t t-foreach="rxxxxg33" t-as="g33">
+      <RXXXXG33 t-att="{'xsi:nil': g33.get('nil', None), 'ROWNUM': g33_index + 1}"><t t-raw="g33.get('cnt', None)"/></RXXXXG33></t>
+      <t t-foreach="rxxxxg4s" t-as="g4s">
+      <RXXXXG4S t-att="['ROWNUM', g4s_index + 1]" t-raw="g4s"/></t>
+      <t t-foreach="rxxxxg105_2s" t-as="g105">
+      <RXXXXG105_2S t-att="{'xsi:nil': g105.get('nil', None), 'ROWNUM': g105_index + 1}"><t t-raw="g105.get('cnt', None)"/></RXXXXG105_2S></t>
+      <t t-foreach="rxxxxg5" t-as="g5">
+      <RXXXXG5 t-att="['ROWNUM', g5_index + 1]" t-raw="g5"/></t>
+      <t t-foreach="rxxxxg6" t-as="g6">
+      <RXXXXG6 t-att="['ROWNUM', g6_index + 1]" t-raw="g6"/></t>
+      <t t-foreach="rxxxxg008" t-as="g008">
+      <RXXXXG008 t-att="['ROWNUM', g008_index + 1]" t-raw="g008"/></t>
+      <t t-foreach="rxxxxg009" t-as="g009">
+      <RXXXXG009 t-att="{'xsi:nil': g009.get('nil', None), 'ROWNUM': g009_index + 1}"><t t-raw="g009.get('cnt', None)"/></RXXXXG009></t>
+      <t t-foreach="rxxxxg010" t-as="g010">
+      <RXXXXG010 t-att="{'xsi:nil': g010.get('nil', None), 'ROWNUM': g010_index + 1}"><t t-raw="g010.get('cnt', None)"/></RXXXXG010></t>
+      <t t-foreach="rxxxxg011" t-as="g011">
+      <RXXXXG011 t-att="{'xsi:nil': g011.get('nil', None), 'ROWNUM': g011_index + 1}"><t t-raw="g011.get('cnt', None)"/></RXXXXG011></t>
+      <HBOS><t t-raw="hbos"/></HBOS>
+      <HKBOS><t t-raw="hkbos"/></HKBOS>
+      <R003G10S t-att="['xsi:nil', r003g10s.get('nil', None)]"><t t-raw="r003g10s.get('cnt', None)"/></R003G10S>
+</DECLARBODY>
+</DECLAR>
+        </template>
+    </data>
+</odoo>

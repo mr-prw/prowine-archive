@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="export_stockinfo_report_view_wizard" model="ir.ui.view">
+			<field name="name">expor._stockinfo.report.wizard.view</field>
+			<field name="model">export.stockinfo.report.ept</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Export Product Stock Info ">
+					<group>
+						<group>
+							<field name="report_wise" widget="radio" options="{'horizontal': true}" />
+							<field name="warehouse_ids" widget="many2many_tags"
+								options="{'no_create': True}"
+								attrs="{'invisible': [('report_wise', '!=', 'Warehouse')],'required': [('report_wise','=', 'Warehouse')]}" />
+							<field name="location_ids" widget="many2many_tags" options="{'no_create': True}"
+								attrs="{'invisible': [('report_wise', '=', 'Warehouse')],'required': [('report_wise', '=', 'Location')]}" />
+						</group>
+						<group>
+							<field name="to_date" />
+						</group>
+					</group>
+
+					<group>
+						<group>
+							<field name="is_active_product" />
+						</group>
+						<group>
+							<field name="is_display_red" />
+						</group>
+					</group>
+					<group>
+						<group string="Supplier">
+							<field name="supplier_ids" nolabel="1" options="{'no_create': True}"
+								domain="[('supplier','=',True)]">
+								<tree string="Suppliers">
+									<field name="name" nolabel="1" />
+								</tree>
+							</field>
+						</group>
+						<group string="Category">
+							<field name="category_ids" nolabel="1" options="{'no_create': True}" />
+						</group>
+					</group>
+					<footer>
+						<button string="Download Report XLS" type="object"
+							name="print_stock_info_report_xls" class="oe_highlight" />
+						or
+						<button string="Download Report PDF" type="object"
+							name="print_stock_info_report_pdf" class="oe_highlight" />
+						or
+						<button string="_Cancel" class="btn-default" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="export_stockinfo_report_action" model="ir.actions.act_window">
+			<field name="name">Export Products with StockInfo</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">export.stockinfo.report.ept</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem action="export_stockinfo_report_action" id="menu_export_stockinfo_report"
+			name="Export Stock" parent="stock.menu_warehouse_report"
+			sequence="5" groups="export_stockinfo_ept.group_export_multi_warehouse_stock" />
+	</data>
+</odoo>

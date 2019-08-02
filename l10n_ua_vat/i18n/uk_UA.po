@@ -1,0 +1,1456 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_ua_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e-20171221\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-03 21:42+0000\n"
+"PO-Revision-Date: 2018-01-03 21:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_invoice_tax_invoice_count
+msgid "# of Tax Invoices"
+msgstr "# of Tax Invoices"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.export_template
+msgid "&lt;?xml version='1.0' encoding='windows-1251'?&gt;"
+msgstr "&lt;?xml version='1.0' encoding='windows-1251'?&gt;"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:750
+#, python-format
+msgid ". Імпортований товар '{}' має невірний формат УКТ ЗЕД: {}. Очікується 10 символів."
+msgstr ". Імпортований товар '{}' має невірний формат УКТ ЗЕД: {}. Очікується 10 символів."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:732
+#, python-format
+msgid ". Вкажіть ЄДРПОУ у налаштуваннях компанії."
+msgstr ". Вкажіть ЄДРПОУ у налаштуваннях компанії."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:734
+#, python-format
+msgid ". Вкажіть ІПН у налаштуваннях компанії."
+msgstr ". Вкажіть ІПН у налаштуваннях компанії."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:730
+#, python-format
+msgid ". Вкажіть вашу ДПІ у налаштуваннях компанії."
+msgstr ". Вкажіть вашу ДПІ у налаштуваннях компанії."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:728
+#, python-format
+msgid ". Вкажіть номер податкової накладної."
+msgstr ". Вкажіть номер податкової накладної."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:736
+#, python-format
+msgid ". Вкажіть ідентифікаційний код\n"
+"                                      відповідальної особи у налаштуваннях\n"
+"                                      пов’язаного контрагента."
+msgstr ". Вкажіть ідентифікаційний код\n"
+"                                      відповідальної особи у налаштуваннях\n"
+"                                      пов’язаного контрагента."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:745
+#, python-format
+msgid ". Поле УКТ ЗЕД для товару '{}' не заповнене."
+msgstr ". Поле УКТ ЗЕД для товару '{}' не заповнене."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:756
+#, python-format
+msgid ". Товар '{}' має невірний формат УКТ ЗЕД: {}. Очікується більше 4-х символів (4, 6, 8 або 10)."
+msgstr ". Товар '{}' має невірний формат УКТ ЗЕД: {}. Очікується більше 4-х символів (4, 6, 8 або 10)."
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "01 - Складена на суму перевищення звичайної ціни над фактичною"
+msgstr "01 - Складена на суму перевищення звичайної ціни над фактичною"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "02 - Постачання неплатнику податку"
+msgstr "02 - Постачання неплатнику податку"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "03 - Постачання товарів/послуг у рахунок оплати праці фізичним особам, які перебувають у трудових відносинах із платником податку"
+msgstr "03 - Постачання товарів/послуг у рахунок оплати праці фізичним особам, які перебувають у трудових відносинах із платником податку"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "04 - Постачання у межах балансу для невиробничого використання"
+msgstr "04 - Постачання у межах балансу для невиробничого використання"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "05 - Ліквідація основних засобів за самостійним рішенням платника податку"
+msgstr "05 - Ліквідація основних засобів за самостійним рішенням платника податку"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "06 - Переведення виробничих основних засобів до складу невиробничих"
+msgstr "06 - Переведення виробничих основних засобів до складу невиробничих"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "07 - Експортні постачання"
+msgstr "07 - Експортні постачання"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "08 - Постачання для операцій, які не є об'єктом оподаткування податком на додану вартість"
+msgstr "08 - Постачання для операцій, які не є об'єктом оподаткування податком на додану вартість"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "09 - Постачання для операцій, які звільнені від оподаткування податком на додану вартість"
+msgstr "09 - Постачання для операцій, які звільнені від оподаткування податком на додану вартість"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "10 - Визначення при анулюванні платника податку податкових зобов'язань по товарах/послугах, необоротних активах, суми податку по яких були включені до складу податкового кредиту, не були використані в оподатковуваних операціях у межах господарської діяльності"
+msgstr "10 - Визначення при анулюванні платника податку податкових зобов'язань по товарах/послугах, необоротних активах, суми податку по яких були включені до складу податкового кредиту, не були використані в оподатковуваних операціях у межах господарської діяльності"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "11 - Складена за щоденними підсумками операцій"
+msgstr "11 - Складена за щоденними підсумками операцій"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "12 - Складена на вартість безоплатно поставлених товарів/послуг, обчислену виходячи з рівня звичайних цін"
+msgstr "12 - Складена на вартість безоплатно поставлених товарів/послуг, обчислену виходячи з рівня звичайних цін"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "13 - Використання виробничих або невиробничих засобів, інших товарів/послуг не у господарській діяльності"
+msgstr "13 - Використання виробничих або невиробничих засобів, інших товарів/послуг не у господарській діяльності"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "14 - Складена покупцем (отримувачем) послуг від нерезидента"
+msgstr "14 - Складена покупцем (отримувачем) послуг від нерезидента"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "15 - Складена на суму перевищення митної вартості над фактичною ціною постачання"
+msgstr "15 - Складена на суму перевищення митної вартості над фактичною ціною постачання"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "16 - Складена на суму перевищення балансової (залишкової) вартості необоротних активів над фактичною ціною їх постачання"
+msgstr "16 - Складена на суму перевищення балансової (залишкової) вартості необоротних активів над фактичною ціною їх постачання"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "17 - Складена на суму перевищення собівартості самостійно виготовлених товарів/послуг над фактичною ціною їх постачання"
+msgstr "17 - Складена на суму перевищення собівартості самостійно виготовлених товарів/послуг над фактичною ціною їх постачання"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_form_view
+msgid "2 значне число"
+msgstr "2 значне число"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "2, 3 або 5"
+msgstr "2, 3 або 5"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_form_view
+msgid "4 значне число"
+msgstr "4 значне число"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Перспективний"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_res_company
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_company_id
+msgid "Company"
+msgstr "Компанія"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_create_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_create_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_create_date
+msgid "Created on"
+msgstr "Дата створення"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_company_currency_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_currency_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_danger_date
+msgid "Danger Date"
+msgstr "Дата небезпеки"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_display_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_display_name
+msgid "Display Name"
+msgstr "Назва для відображення"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice.import,state:0
+msgid "Done"
+msgstr "Завершено"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice.export,state:0
+#: selection:account.taxinvoice.export_single,state:0
+msgid "Download"
+msgstr "Завантажити"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice.export,state:0
+#: selection:account.taxinvoice.export_single,state:0
+#: selection:account.taxinvoice.import,state:0
+msgid "Draft"
+msgstr "Чернетка"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_excise_code
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_excise_code
+msgid "Excise code"
+msgstr "Акцизний код"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_export_single
+msgid "Export single tax invoice"
+msgstr "Вивантаження однієї податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_export
+msgid "Export the selected tax invoices"
+msgstr "Вивантаження обраних податкових накладних"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_fname
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_fname
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_fname
+msgid "File Name"
+msgstr "Назва файлу"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_fdata
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_fdata
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_fdata
+msgid "File data"
+msgstr "Дані файлу"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_invoice_fully_tax_invoiced
+msgid "Fully Tax Invoiced"
+msgstr "Повністю включено в ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Group By"
+msgstr "Групувати за"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_id
+msgid "ID"
+msgstr "ІД"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_import
+msgid "Import single tax invoice"
+msgstr "Імпорт податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_invoice
+msgid "Invoice"
+msgstr "Рахунок"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_journal_id
+msgid "Journal"
+msgstr "Журнал"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth___last_update
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax___last_update
+msgid "Last Modified on"
+msgstr "Остання модифікація"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_write_uid
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_write_uid
+msgid "Last Updated by"
+msgstr "Востаннє оновив"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_write_date
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_name
+msgid "Name"
+msgstr "Назва"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_product_product
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_product_id
+msgid "Product"
+msgstr "Товар"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_product_template
+msgid "Product Template"
+msgstr "Шаблон товару"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_product_uom
+msgid "Product Unit of Measure"
+msgstr "Одиниця виміру товару"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_res_users_user_ipn
+msgid "Registry Number"
+msgstr "ЄДРПОУ"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.import_in_tax_invoice_action
+msgid "Single Tax Invoice Import"
+msgstr "Імпорт податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_state
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_state
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_import_state
+msgid "State"
+msgstr "Область"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice
+msgid "Tax Invoice"
+msgstr "Податкова накладна"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_contrtype
+msgid "Tax Invoice Contract Type"
+msgstr "Тип контракту"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_line
+msgid "Tax Invoice Line"
+msgstr "Рядок податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_paymeth
+msgid "Tax Invoice Payment method"
+msgstr "Спосіб оплати"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_account_taxinvoice_tax
+msgid "Tax Invoice taxes"
+msgstr "Податки накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_invoice_tax_invoice_ids
+msgid "Tax Invoices"
+msgstr "Податклві накладні"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_res_users
+msgid "Users"
+msgstr "Користувачі"
+
+#. module: l10n_ua_vat
+#: model:ir.model,name:l10n_ua_vat.model_res_config_settings
+msgid "res.config.settings"
+msgstr "res.config.settings"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_users_user_ipn
+msgid "ІПН"
+msgstr "ІПН"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:206
+#, python-format
+msgid "ІПН %s покупця не співпадає з ІПН вашої організації!"
+msgstr "ІПН %s покупця не співпадає з ІПН вашої організації!"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "ІПН Партнера"
+msgstr "ІПН Партнера"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_ipn_partner
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "ІПН партнера"
+msgstr "ІПН партнера"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:231
+#, python-format
+msgid "ІПН продавця співпадає з вашим ІПН"
+msgstr "ІПН продавця співпадає з вашим ІПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.menu,name:l10n_ua_vat.menu_import_in_vat_invoice
+msgid "Імпорт ПН"
+msgstr "Імпорт ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "Імпорт з XML"
+msgstr "Імпорт з XML"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "Імпорт отриманих ПН"
+msgstr "Імпорт отриманих ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "Імпорт податкової накладної"
+msgstr "Імпорт податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_is_imported
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_is_imported
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_is_imported
+msgid "Імпортований"
+msgstr "Імпортований"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Інформація, що буде включена в xml файл."
+msgstr "Інформація, що буде включена в xml файл."
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+msgid "Їх можна імпортувати у програму здачі звітності"
+msgstr "Їх можна імпортувати у програму здачі звітності"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Їх можна імпортувати у програму здачі звітності."
+msgstr "Їх можна імпортувати у програму здачі звітності."
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_adr_partner
+msgid "Адреса партнера"
+msgstr "Адреса партнера"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_account_analytic_id
+msgid "Аналітичний рахунок"
+msgstr "Аналітичний рахунок"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_base
+msgid "База"
+msgstr "База"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_tree_view
+msgid "Без ПДВ"
+msgstr "Без ПДВ"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,doc_type:0
+msgid "Бухгалтерська довідка"
+msgstr "Бухгалтерська довідка"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_res_company_comp_sti
+#: model:ir.model.fields,help:l10n_ua_vat.field_res_config_settings_comp_sti
+msgid "Виберіть ДПІ в якій взято на облік ваше підприємство"
+msgstr "Виберіть ДПІ в якій взято на облік ваше підприємство"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:1093
+#, python-format
+msgid "Виберіть валюту в документі!"
+msgstr "Виберіть валюту в документі!"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:168
+#, python-format
+msgid "Виберіть файл для імпорту"
+msgstr "Виберіть файл для імпорту"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Вивантаження в xml"
+msgstr "Вивантаження в xml"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.action_account_single_tax_invoice_export
+msgid "Вивантаження податкової накладної"
+msgstr "Вивантаження податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Вивантажити в xml"
+msgstr "Вивантажити в xml"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,category:0
+#: model:ir.ui.menu,name:l10n_ua_vat.menu_customer_vat_invoices
+msgid "Видані ПН"
+msgstr "Видані ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.customer_tax_invoice_list_action
+msgid "Видані податкові накладні"
+msgstr "Видані податкові накладні"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_calendar_view
+msgid "Видані/отримані податкові накладні"
+msgstr "Видані/отримані податкові накладні"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:171
+#, python-format
+msgid "Вкажіть ІПН у налаштуваннях компанії"
+msgstr "Вкажіть ІПН у налаштуваннях компанії"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_invoice.py:123
+#, python-format
+msgid "Вкажіть ІПН у налаштуваннях контрагента."
+msgstr "Вкажіть ІПН у налаштуваннях контрагента."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:595
+#, python-format
+msgid "Вкажіть номер податкової накладної"
+msgstr "Вкажіть номер податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_manual
+msgid "Вручну"
+msgstr "Вручну"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_amount_total
+msgid "Всього"
+msgstr "Всього"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_tree_view
+msgid "Всього з ПДВ"
+msgstr "Всього з ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_signer_id
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Відповідальна особа"
+msgstr "Відповідальна особа"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Відправлено в ЄРПН"
+msgstr "Відправлено в ЄРПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Відправлені ПН"
+msgstr "Відправлені ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Генерується автоматично"
+msgstr "Генерується автоматично"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_date_vynyk
+msgid "Дата виникнення ПЗ"
+msgstr "Дата виникнення ПЗ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contract_date
+msgid "Дата договору"
+msgstr "Дата договору"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_date_vyp
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_date_vynyk
+msgid "Дата першої події з ПДВ"
+msgstr "Дата першої події з ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_date_reg
+msgid "Дата реєстрації"
+msgstr "Дата реєстрації"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_date_reg
+msgid "Дата реєстрації в ЄРПН"
+msgstr "Дата реєстрації в ЄРПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_date_vyp
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Дата складання"
+msgstr "Дата складання"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_form_view
+msgid "Детальна інформація про податковий орган"
+msgstr "Детальна інформація про податковий орган"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.spr_sti_list_action
+#: model:ir.model,name:l10n_ua_vat.model_account_sprsti
+#: model:ir.ui.menu,name:l10n_ua_vat.menu_spr_sti
+msgid "Довідник ДПІ"
+msgstr "Довідник ДПІ"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,help:l10n_ua_vat.spr_sti_list_action
+msgid "Додайте інформацію про ДПІ."
+msgstr "Додайте інформацію про ДПІ."
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Додатково"
+msgstr "Додатково"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.action_account_tax_invoice_export
+msgid "Експорт ПН в xml"
+msgstr "Експорт ПН в xml"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+msgid "Експорт податкових накладних"
+msgstr "Експорт податкових накладних"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Експорт податкової накладної"
+msgstr "Експорт податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Закрити"
+msgstr "Закрити"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_move_id
+msgid "Запис в журналі"
+msgstr "Запис в журналі"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:625
+#, python-format
+msgid "Запис в журналі вже створенно!"
+msgstr "Запис в журналі вже створенно!"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,state:0
+msgid "Зареєстровано"
+msgstr "Зареєстровано"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Зареєстровано в ЄРПН"
+msgstr "Зареєстровано в ЄРПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Зареєстровані ПН"
+msgstr "Зареєстровані ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_prev_values
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_prev_values
+msgid "Зберігає попередні значення: УКТ ЗЕД, ДКПП, Імпортований"
+msgstr "Зберігає попередні значення: УКТ ЗЕД, ДКПП, Імпортований"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_h03
+msgid "Зведена ПН"
+msgstr "Зведена ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_amount_tara
+msgid "Зворотна тара"
+msgstr "Зворотна тара"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_discount
+msgid "Знижка (%)"
+msgstr "Знижка (%)"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Зробити чернеткою"
+msgstr "Зробити чернеткою"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_category
+msgid "Категорія"
+msgstr "Категорія"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_vd_sgt
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_vd_sgt
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_vd_sgt
+msgid "Код ВД СГТ"
+msgstr "Код ВД СГТ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_dkpp
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_dkpp
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_dkpp
+msgid "Код ДКПП"
+msgstr "Код ДКПП"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_ukt_zed
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_ukt_zed
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_ukt_zed
+msgid "Код УКТ ЗЕД"
+msgstr "Код УКТ ЗЕД"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_c_raj
+msgid "Код адміністративного району"
+msgstr "Код адміністративного району"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_vd_sgt
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_product_vd_sgt
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_template_vd_sgt
+msgid "Код виду діяльності сільськогосподарського товаровиробника"
+msgstr "Код виду діяльності сільськогосподарського товаровиробника"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_uom_uom_code
+msgid "Код згідно КСПОВО"
+msgstr "Код згідно КСПОВО"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_c_reg
+msgid "Код області"
+msgstr "Код області"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_uom_code
+msgid "Код одиниць"
+msgstr "Код одиниць"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_uom_uom_code
+msgid "Код одиниць виміру"
+msgstr "Код одиниць виміру"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:139
+#, python-format
+msgid "Код одиниці виміру не знайдено!"
+msgstr "Код одиниці виміру не знайдено!"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_uom_code
+msgid "Код одниниць виміру згідно КСПОВО"
+msgstr "Код одниниць виміру згідно КСПОВО"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_dkpp
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_product_dkpp
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_template_dkpp
+msgid "Код послуг згідно ДКПП"
+msgstr "Код послуг згідно ДКПП"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_kod_pilg
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_product_exemption
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_product_template_exemption
+msgid "Код пільги"
+msgstr "Код пільги"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_product_exemption
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_template_exemption
+msgid "Код пільги або номер пункту ПКУ"
+msgstr "Код пільги або номер пункту ПКУ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_c_sti
+msgid "Код територіального органу отримувача"
+msgstr "Код територіального органу отримувача"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_ukt_zed
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_product_ukt_zed
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_template_ukt_zed
+msgid "Код товару згідно УКТ ЗЕД"
+msgstr "Код товару згідно УКТ ЗЕД"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_number2
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_kod_filii
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_kod_filii
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_partner_kod_filii
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_users_kod_filii
+msgid "Код філії"
+msgstr "Код філії"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:216
+#, python-format
+msgid "Код філії '%s' не співпадає з кодом філії вашої організації!"
+msgstr "Код філії '%s' не співпадає з кодом філії вашої організації!"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_kod_filii
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Код філії партнера"
+msgstr "Код філії партнера"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_company_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_company_id
+msgid "Компанія"
+msgstr "Компанія"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_partner_id
+msgid "Компанія-партнер"
+msgstr "Компанія-партнер"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_registration_deadline
+msgid "Крайній термін реєстрації"
+msgstr "Крайній термін реєстрації"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_quantity
+msgid "Кількість"
+msgstr "Кількість"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_registration_deadline
+msgid "Кінцева дата реєстрації в ЄРПН"
+msgstr "Кінцева дата реєстрації в ЄРПН"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,doc_type:0
+msgid "Митна декларація"
+msgstr "Митна декларація"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,state:0
+msgid "На реєстрації"
+msgstr "На реєстрації"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_name
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_name
+msgid "Назва"
+msgstr "Назва"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_name
+msgid "Назва податку"
+msgstr "Назва податку"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_horig1
+msgid "Не видається покупцю"
+msgstr "Не видається покупцю"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:183
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:185
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:193
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:196
+#, python-format
+msgid "Невірна версія формату xml"
+msgstr "Невірна версія формату xml"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:176
+#, python-format
+msgid "Невірний формат xml файлу!"
+msgstr "Невірний формат xml файлу!"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:180
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:200
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:204
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:211
+#: code:addons/l10n_ua_vat/wizard/account_tax_invoice_import.py:222
+#, python-format
+msgid "Невірний формат файлу"
+msgstr "Невірний формат файлу"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,htypr:0
+msgid "Немає"
+msgstr "Немає"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:589
+#, python-format
+msgid "Немає жодного рядка в документі!"
+msgstr "Немає жодного рядка в документі!"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_partner_default_ipn
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_users_default_ipn
+msgid "Неплатник ПДВ"
+msgstr "Неплатник ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Номенклатура"
+msgstr "Номенклатура"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_number
+msgid "Номер"
+msgstr "Номер"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Номер ПН:"
+msgstr "Номер ПН:"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contract_numb
+msgid "Номер договору"
+msgstr "Номер договору"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_export_single_pn_numb
+msgid "Номер податкової накладної"
+msgstr "Номер податкової накладної"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "Оберіть файл для завантаження:"
+msgstr "Оберіть файл для завантаження:"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_config_settings_ua_vat
+msgid "Облік ПДВ"
+msgstr "Облік ПДВ"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:1355
+#, python-format
+msgid "Обрана одиниця виміру не сумісна з одиницею виміру товару."
+msgstr "Обрана одиниця виміру не сумісна з одиницею виміру товару."
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+msgid "Обрані податкові накладні будуть вивантажені у xml файли."
+msgstr "Обрані податкові накладні будуть вивантажені у xml файли."
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_uom_id
+msgid "Одиниця виміру"
+msgstr "Одиниця виміру"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_number1
+msgid "Ознака спеціальної ПН"
+msgstr "Ознака спеціальної ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_is_imported
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_product_is_imported
+#: model:ir.model.fields,help:l10n_ua_vat.field_product_template_is_imported
+msgid "Ознака імпортованого товару"
+msgstr "Ознака імпортованого товару"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_signer_id
+msgid "Особа, яка склала і підписала ПН"
+msgstr "Особа, яка склала і підписала ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Ось ваші накладні:"
+msgstr "Ось ваші накладні:"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,category:0
+#: model:ir.ui.menu,name:l10n_ua_vat.menu_supplier_vat_invoices
+msgid "Отримані ПН"
+msgstr "Отримані ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,name:l10n_ua_vat.supplier_tax_invoice_list_action
+msgid "Отримані податкові накладні"
+msgstr "Отримані податкові накладні"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_tree_view
+msgid "ПДВ"
+msgstr "ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_partner_id
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Партнер"
+msgstr "Партнер"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_sequence
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_tax_sequence
+msgid "Перетягніть для зміни порядкового номеру"
+msgstr "Перетягніть для зміни порядкового номеру"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_invoice_id
+msgid "Пов’язаний рахунок"
+msgstr "Пов’язаний рахунок"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Податки"
+msgstr "Податки"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.intaxinvoice_form_inherit
+#: model:ir.ui.view,arch_db:l10n_ua_vat.taxinvoice_form_inherit
+msgid "Податкова"
+msgstr "Податкова"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,doc_type:0
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Податкова накладна"
+msgstr "Податкова накладна"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_comp_sti
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_comp_sti
+msgid "Податковий орган"
+msgstr "Податковий орган"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_amount_tax
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_tax_id
+msgid "Податок"
+msgstr "Податок"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:1257
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:1354
+#, python-format
+msgid "Попередження!"
+msgstr "Попередження!"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_taxinvoice_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_taxinvoice_id
+msgid "Посилання на ПН"
+msgstr "Посилання на ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_move_id
+msgid "Посилання на запис в журналі проведень"
+msgstr "Посилання на запис в журналі проведень"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_sequence
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_sequence
+msgid "Послідовність"
+msgstr "Послідовність"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_view_filter
+msgid "Пошук ДПІ"
+msgstr "Пошук ДПІ"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Пошук за категорією"
+msgstr "Пошук за категорією"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_prych_zv
+msgid "Причина звільнення від ПДВ"
+msgstr "Причина звільнення від ПДВ"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,state:0
+msgid "Підготовлено"
+msgstr "Підготовлено"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Підготовлені ПН"
+msgstr "Підготовлені ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Підтвердити"
+msgstr "Підтвердити"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_amount_untaxed
+msgid "Разом"
+msgstr "Разом"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_sprsti_name_raj
+msgid "Район"
+msgstr "Район"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_account_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_account_id
+msgid "Рахунок"
+msgstr "Рахунок"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vat_account_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vat_account_id
+msgid "Рахунок ПДВ"
+msgstr "Рахунок ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_account_id
+msgid "Рахунок податку"
+msgstr "Рахунок податку"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_line_account_id
+msgid "Рахунок підтверженного ПДВ"
+msgstr "Рахунок підтверженного ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_account_id
+msgid "Рахунок розрахунків по ПДВ"
+msgstr "Рахунок розрахунків по ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_invoice_id
+msgid "Рахунок-фактура"
+msgstr "Рахунок-фактура"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,doc_type:0
+msgid "Розрахунок коригування до ПН"
+msgstr "Розрахунок коригування до ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_taxinvoice_line_ids
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Рядки ПН"
+msgstr "Рядки ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_line_ids
+msgid "Рядки податків"
+msgstr "Рядки податків"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,state:0
+msgid "Скасовано"
+msgstr "Скасовано"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Скасовані ПН"
+msgstr "Скасовані ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "Скасувати"
+msgstr "Скасувати"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_h01
+msgid "Складається інвестором"
+msgstr "Складається інвестором"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_tree_view
+msgid "Список ДПІ"
+msgstr "Список ДПІ"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_tree_view
+msgid "Список ПН"
+msgstr "Список ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_payment_meth
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_paymeth_name
+#: model:ir.ui.view,arch_db:l10n_ua_vat.ti_paymeth_tree_view
+msgid "Спосіб оплати"
+msgstr "Спосіб оплати"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_payment_meth
+msgid "Спосіб оплати за постачання"
+msgstr "Спосіб оплати за постачання"
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:610
+#, python-format
+msgid "Спочатку вкажіть дату реєстрації."
+msgstr "Спочатку вкажіть дату реєстрації."
+
+#. module: l10n_ua_vat
+#: code:addons/l10n_ua_vat/models/account_tax_invoice.py:1258
+#, python-format
+msgid "Спочатку оберіть партнера!"
+msgstr "Спочатку оберіть партнера!"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_taxinvoice_line_tax_id
+msgid "Ставка податку"
+msgstr "Ставка податку"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_state
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Статус"
+msgstr "Статус"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.account_taxinvoice_export_view
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_single_tax_invoice_export
+msgid "Створити XML"
+msgstr "Створити XML"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.taxinvoice_form_inherit
+msgid "Створити ПН"
+msgstr "Створити ПН"
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,help:l10n_ua_vat.customer_tax_invoice_list_action
+msgid "Створіть першу видану податкову накладну."
+msgstr "Створіть першу видану податкову накладну."
+
+#. module: l10n_ua_vat
+#: model:ir.actions.act_window,help:l10n_ua_vat.supplier_tax_invoice_list_action
+msgid "Створіть першу отриману податкову накладну."
+msgstr "Створіть першу отриману податкову накладну."
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_price_subtotal
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tax_amount
+msgid "Сума"
+msgstr "Сума"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_tax_amount
+msgid "Сума податку"
+msgstr "Сума податку"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vatfree_tax_tag_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vatfree_tax_tag_id
+msgid "Тег Звільнено від ПДВ"
+msgstr "Тег Звільнено від ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vatnot_tax_tag_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vatnot_tax_tag_id
+msgid "Тег Не є ПДВ"
+msgstr "Тег Не є ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vat0_tax_tag_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vat0_tax_tag_id
+msgid "Тег ПДВ 0%"
+msgstr "Тег ПДВ 0%"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vat20_tax_tag_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vat20_tax_tag_id
+msgid "Тег ПДВ 20%"
+msgstr "Тег ПДВ 20%"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_vat7_tax_tag_id
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_vat7_tax_tag_id
+msgid "Тег ПДВ 7%"
+msgstr "Тег ПДВ 7%"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_tel_partner
+msgid "Телефон партнера"
+msgstr "Телефон партнера"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contract_type
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_contrtype_name
+msgid "Тип договору"
+msgstr "Тип договору"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,help:l10n_ua_vat.field_account_taxinvoice_contract_type
+msgid "Тип договору згідно ЦКУ"
+msgstr "Тип договору згідно ЦКУ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_doc_type
+msgid "Тип документу"
+msgstr "Тип документу"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_htypr
+msgid "Тип причини"
+msgstr "Тип причини"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,doc_type:0
+msgid "Транспортний квиток"
+msgstr "Транспортний квиток"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.spr_sti_form_view
+msgid "Форма довідника ДПІ"
+msgstr "Форма довідника ДПІ"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_form_view
+msgid "Форма податкової накладної"
+msgstr "Форма податкової накладної"
+
+#. module: l10n_ua_vat
+#: selection:res.company,legal_status:0
+msgid "Фізична особа"
+msgstr "Фізична особа"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_price_unit_wo_tax
+msgid "Ціна без ПДВ"
+msgstr "Ціна без ПДВ"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_account_taxinvoice_line_price_unit
+msgid "Ціна за одиницю"
+msgstr "Ціна за одиницю"
+
+#. module: l10n_ua_vat
+#: selection:account.taxinvoice,state:0
+msgid "Чорновий"
+msgstr "Чорновий"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.tax_invoice_view_filter
+msgid "Чорнові ПН"
+msgstr "Чорнові ПН"
+
+#. module: l10n_ua_vat
+#: selection:res.company,legal_status:0
+msgid "Юридична ососба"
+msgstr "Юридична ососба"
+
+#. module: l10n_ua_vat
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_company_legal_status
+#: model:ir.model.fields,field_description:l10n_ua_vat.field_res_config_settings_legal_status
+msgid "Юридичний статус"
+msgstr "Юридичний статус"
+
+#. module: l10n_ua_vat
+#: model:ir.ui.view,arch_db:l10n_ua_vat.view_account_tax_invoice_import
+msgid "файл у форматі xml"
+msgstr "файл у форматі xml"
+

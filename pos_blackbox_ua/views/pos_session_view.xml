@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--
+    Copyright (C) 2018 Oleksandr Komarov (https://modool.pro)
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+-->
+
+    <record id="view_pos_session_form_BlackBoxUA" model="ir.ui.view">
+        <field name="name">pos.session.BlackBoxUA</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form"/>
+        <field name="arch" type="xml">
+            <div class="oe_button_box" position="inside">
+                <button name="%(blackbox_ua_actions)d" class="oe_stat_button" type="action" context="{'operation': 'x_report'}"  icon="fa-info">
+                    <span class="o_stat_text">X Report</span>
+                </button>
+                <button name="%(blackbox_ua_actions)d" class="oe_stat_button" states="opening_control,opened" context="{'operation': 'null_receipt'}" type="action" icon="fa-circle-o">
+                    <span class="o_stat_text">Null Receipt</span>
+                </button>
+                <button name="%(blackbox_ua_actions)d" class="oe_stat_button" states="closing_control,closed" type="action" context="{'operation': 'z_report'}" icon="fa-bolt">
+                    <span class="o_stat_text">Z Report</span>
+                </button>
+                <button name="%(blackbox_ua_actions)d" class="oe_stat_button" type="action" context="{'operation': 'disable_fiscal_receipt'}" icon="fa-trash">
+                    <span class="o_stat_text">Disable opened receipt</span>
+                </button>
+            </div>
+        </field>
+    </record>
+
+
+</odoo>

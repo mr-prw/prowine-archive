@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- out tax invoice sequence data -->
+        <record id="out_tax_invoice" model="ir.sequence">
+            <field name="name">Видані ПН</field>
+            <field name="code">out.taxinvoice</field>
+            <field name="padding">1</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+        </record>
+    </data>
+</odoo>

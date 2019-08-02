@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <act_window id="action_nova_poshta_settlement_tree"
+  		name="Settlements"
+  		res_model="nova.poshta.settlement"
+  		view_mode="tree,form" />
+
+    <menuitem id="menu_nova_poshta_settlement"
+  		name="Settlements"
+        parent="menu_nova_poshta_catalog"
+  		sequence="20"
+        action="action_nova_poshta_settlement_tree"/>
+
+    <record id="nova_poshta_settlement_view_form" model="ir.ui.view">
+        <field name="name">nova.poshta.settlement.view.form</field>
+        <field name="model">nova.poshta.settlement</field>
+        <field name="arch" type="xml">
+            <form edit="false" create="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h3><field name="name" placeholder="Warehouse Name"/></h3>
+                    </div>
+                    <group>
+                        <field name="type" />
+                        <field name="area" />
+                        <field name="area_id" />
+                        <field name="index_1" />
+                        <field name="index_2" />
+                    </group>
+                    <group>
+                        <field name="region" />
+                        <field name="region_description" />
+                        <field name="region_description_ru" />
+                    </group>
+                    <group string="Delivery Days" name="delivery">
+                        <field name="delivery_1" />
+                        <field name="delivery_2" />
+                        <field name="delivery_3" />
+                        <field name="delivery_4" />
+                        <field name="delivery_5" />
+                        <field name="delivery_6" />
+                        <field name="delivery_7" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="nova_poshta_settlement_view_tree" model="ir.ui.view">
+        <field name="name">nova.poshta.settlement.view.tree</field>
+        <field name="model">nova.poshta.settlement</field>
+        <field name="arch" type="xml">
+            <tree edit="false" create="false">
+                <field name="name"/>
+                <field name="area_id"/>
+                <field name="type"/>
+                <field name="write_date" string="Updated"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

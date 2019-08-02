@@ -1,0 +1,6 @@
+INVOICE ID,PARTNER,CURRENCY,PRODUCT,Account,QUANTITY,UOM,DESCRIPTION,PRICE,SALESPERSON,TAX,DATE
+invoice1,Agrolait,EUR,Basic Computer,100000,1,Unit(s),Basic Computer,10000,Administrator,Tax 15.00%,2017-02-03
+invoice1,Agrolait,EUR,Little Server,101000,2,Unit(s),Little Server,50000,Administrator,Tax 15.00%,2017-02-04
+invoice2,Agrolait,EUR,Server,101110,3,Unit(s),Server,100000,Demo User,Tax 15.00%,2017-02-06
+invoice3,Axeloer,EUR,Basic Computer,101120,1,Unit(s),Basic Computer,10000,Administrator,,2017-02-07
+invoice4,Camptocamp,EUR,Little Server,,2,Unit(s),Little Server,50000,Demo User,Tax 15.00%,2017-02-08

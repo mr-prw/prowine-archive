@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="bill_of_lading_report">
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+                <t t-call="web.basic_layout"  t-lang="uk_UA">
+                    <t t-set="p" t-value="o.partner_id"/>
+                    <t t-set="c" t-value="o.company_id"/>
+                    <div class="page">
+                        <div class="row" >
+                            <div class="col-xs-3">
+                                <br/><br/>
+                                <p style="font-size:12px;">
+                                    1 copy - the sender <br/>
+                                    2 copy - the recipient <br/>
+                                    3 copy - the carrier <br/>
+                                    4 copy - the carrier <br/>
+                                    <nobr style="font-weight:bold;">
+                                        Number, registered in the Uniform Register of Commodity- <br/>
+                                        transport bill of lading for moving alcohol <br/>
+                                        ethyl alcohol and alcoholic beverages
+                                    </nobr>
+                                </p>
+                            </div>
+                            <div class="col-xs-6" align="center" style="font-weight:bold;">
+                                <br/><br/>
+                                <p style="font-size:18px;">BILL OF LADING</p>
+                                <p style="font-size:14px;">ON THE MOVEMENT ALCOHOLIC BEVERAGES</p>
+                                <p style="text-decoration:underline;">№ "<span t-field="o.name"/>" <span t-field="o.date"/></p>
+                            </div>
+                            <div class="col-xs-3">
+                                <br/><br/>
+                                <p style="font-size:12px; text-align:right;">
+                                    Аpproved by <br/>
+                                    Order of the Ministry of Transport and Communications <br/>
+                                    communication of Ukraine <br/>
+                                    28.04.2005 N 154 <br/>
+                                    Form № 1-TN /alcoholic drinks/</p>
+
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td><span>Vehicle</span></td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.fleet_vehicle_id.name"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(make, model, type, registration number)</sub></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td>Trailer</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.fleet_trailer_id.name"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(make, model, type, registration number)</sub></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Type of transportation</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.type_transportation_id"/></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Car carrier</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.expeditor_id"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td>Driver</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.driver_id"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td><span>Сustomer(payer)</span></td>
+                                    <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.partner_id.commercial_partner_id.name"/></td>
+                                </tr>
+                            </table>
+                            <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                        </div>
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>Consignor</td>
+                                    <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.consignor_full_name"/> <t t-if="o.company_id.vat">VAT: </t><span t-field="o.company_id.vat"/> <t t-if="o.company_id.company_registry">ЄДРПОУ: </t><span t-field="o.company_id.company_registry"/> <t t-if="o.company_id.company_registry">License: </t><span t-field="o.company_id.partner_id.license"/></td>
+                                </tr>
+                            </table>
+                            <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                        </div>
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td>Consignee</td>
+                                    <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.consignee_full_name"/> <t t-if="o.partner_id.commercial_partner_id.vat">VAT: <span t-field="o.partner_id.commercial_partner_id.vat"/> </t><t t-if="o.partner_id.commercial_partner_id.company_registry">ЄДРПОУ: <span t-field="o.partner_id.commercial_partner_id.company_registry"/></t></td>
+                                </tr>
+                            </table>
+                            <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Load point</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><t t-if="o.picking_type_id.warehouse_id.partner_id"><span t-field="o.picking_type_id.warehouse_id.partner_id.city"/> <span t-field="o.picking_type_id.warehouse_id.partner_id.street"/></t></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Location)</sub></p>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Unloading point</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><t t-if="o.partner_id"><span t-field="o.partner_id.city"/> <span t-field="o.partner_id.street"/></t></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Location)</sub></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>
+                                Everything is released in quantity <span style="text-decoration:underline;" t-field="o.total_number_of_seats"/> gross mass <span style="text-decoration:underline;" t-field="o.text_gross_mass"/> kg, got a driver / forwarder <span style="text-decoration:underline;" t-field="o.driver_id"/>
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Accountant (shipper's responsible person)</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.accountant"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                 <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Leave allowed</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.leave_allowed"/> </td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(Full name)</sub></p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="row">
+                            <div class="col-xs-8">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">Total amount</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.text_amount_total"/></td>
+                                        </tr>
+                                    </table>
+                                    <p style="padding: 5;" align="center"><sub>(in the words of taxes)</sub></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div>
+                                    <table>
+                                        <tr>
+                                            <td style="white-space:nowrap;">у т.ч. ПДВ та АЗ</td>
+                                            <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"><span t-field="o.total_taxes"/></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                         </div>
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="white-space:nowrap;">Accompanying documents for cargo</td>
+                                    <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"> </td>
+                                </tr>
+                            </table>
+                            <br/>
+                        </div>
+
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="white-space:nowrap;">Transport services provided by road carriers</td>
+                                    <td style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"> </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                        <div style="page-break-before: always;">
+                            <div style="text-align: right;">
+                                <p>Continuation of annex 7</p>
+                                <p style="font-size:10px">The reverse side</p>
+                            </div>
+                            <h4 align="center">INFORMATION ABOUT CARGO</h4>
+                        </div>
+                        <table class="table table-bordered" border="1" style="width:100%; page-break-before: auto;">
+                            <thead>
+                                <tr style="font-size:10px" align="center">
+                                    <td>№</td>
+                                    <td>Product</td>
+                                    <td>Unit of measurement</td>
+                                    <td>Number of eats</td>
+                                    <td>Amount Untaxed</td>
+                                    <td>Amount Total</td>
+                                    <td>Type of packaging</td>
+                                    <td>Documents with cargo</td>
+                                    <td>Gross mass</td>
+                                </tr>
+
+                                <tr style="font-size:10px" align="center">
+                                    <td align="center">
+                                        <span>1</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>2</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>3</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>4</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>5</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>6</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>7</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>8</span>
+                                    </td>
+                                    <td align="center">
+                                        <span>9</span>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="index" t-value="1"/>
+                                <tr t-foreach="o.move_lines" t-as="move" style="font-size:10px; page-break-inside: avoid;" align="center">
+                                        <td t-if="move.quantity_done != 0">
+                                            <span t-esc="index"/>
+                                            <t t-set="index" t-value="index+1"/>
+                                        </td>
+                                        <td t-if="move.quantity_done != 0" align="left"><span t-field="move.product_id"/></td>
+                                        <td t-if="move.quantity_done != 0"><span t-field="move.product_uom"/></td>
+                                        <td t-if="move.quantity_done != 0">
+                                            <t t-if="move.product_uom == move.env.ref('product.product_uom_unit')">
+                                            <span t-field="move.quantity_done" t-field-options="{'widget':'integer'}"/>
+                                        </t>
+
+                                        <t t-if="move.product_uom != move.env.ref('product.product_uom_unit')">
+                                            <span t-field="move.quantity_done"/>
+                                        </t>
+                                        </td>
+                                    <td t-if="move.quantity_done != 0"><span t-esc="'%.2f'% move.amount_untaxed"/></td>
+                                    <td t-if="move.quantity_done != 0"><span t-esc="'%.2f'% move.amount_total"/></td>
+                                    <td t-if="move.quantity_done != 0"><span t-field="move.type_of_packaging"/></td>
+                                    <td t-if="move.quantity_done != 0"><span t-field="move.documents_with_cargo"/></td>
+                                    <td t-if="move.quantity_done != 0"><span t-field="move.weight"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <div class="row" style="font-size:12px">
+                            <div class="col-xs-3">
+                                <div align="center">
+                                    <span >Hired (responsible shipper)</span>
+                                    <br/>
+
+                                    <span>___________________________</span>
+                                    <br/><sub>(Full name, position, signature, seal)</sub>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div align="center">
+                                    <span>Accepted driver / forwarder</span>
+                                    <br/>
+                                    <span>___________________________</span>
+                                    <br/><sub>(Full name, position, signature, seal)</sub>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div align="center">
+                                    <span>Wanted driver / forwarder</span>
+                                    <br/>
+                                    <span>___________________________</span>
+                                    <br/><sub>(Full name, position, signature, seal)</sub>
+                                </div>
+                            </div>
+                            <div class="col-xs-3">
+                                <div align="center">
+                                    <span>Accepted (responsible person of the consignee)</span>
+                                    <br/>
+                                    <span>_________________________________</span>
+                                    <br/><sub>(Full name, position, signature, seal)</sub>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div style="page-break-before: auto;">
+                            <h4 align="center" style="page-break-before: auto;">
+                                TRANSPORTATION AND LOADING OPERATIONS
+                            </h4>
+
+                            <table class="table table-bordered" style="width:100%; page-break-before: auto;">
+                                <thead>
+                                    <tr style="font-size:10px">
+                                        <td rowspan="2" align="center">
+                                            <span>Operation</span>
+                                        </td>
+                                        <td rowspan="2" align="center">
+                                            <span>Gross mass</span>
+                                        </td>
+                                        <td colspan="3" align="center">
+                                            <span>Time</span>
+                                        </td>
+                                        <td rowspan="2" align="center">
+                                            <span>Signature of responsible person</span>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size:10px; page-break-inside: avoid;">
+                                        <td align="center">
+                                            <span>arrival</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>retirement</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>idle</span>
+                                        </td>
+                                    </tr>
+                                    <tr style="font-size:10px; page-break-inside: avoid;">
+                                        <td align="center">
+                                            <span>10</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>11</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>12</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>13</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>14</span>
+                                        </td>
+                                        <td align="center">
+                                            <span>15</span>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="font-size:10px; page-break-inside: avoid;">
+                                        <td align="center">
+                                            <span>Load</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr style="font-size:10px; page-break-inside: avoid;">
+                                        <td align="center">
+                                            <span>Unloading</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </t>
+        </template>
+
+        <template id="report_bill">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="l10n_ua_bill_of_lading.bill_of_lading_report" t-lang="o.company_id.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+
+
+        <report
+            id="action_report_stock_picking"
+            string="Bill of Lading"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="l10n_ua_bill_of_lading.report_bill"
+            file="l10n_ua_bill_of_lading.report_bill"
+            menu="True"/>
+
+        <record id="action_report_stock_picking" model="ir.actions.report">
+            <field name="paperformat_id" ref="l10n_ua_bill_of_lading.paperformat_bill_of_lading"/>
+        </record>
+
+    </data>
+</odoo>

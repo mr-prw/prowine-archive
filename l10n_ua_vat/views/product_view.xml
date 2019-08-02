@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_uktzed_template_only_form" model="ir.ui.view">
+            <field name="name">product.template.form.uktzed</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <field name="barcode" position="after">
+                    <field name="is_imported" attrs="{'invisible': ['|',
+                                                                    ('product_variant_count', '>', 1),
+                                                                    ('type', '=', 'service')]}" />
+                    <field name="ukt_zed_id" domain="[('item_count', '=', 0)]"/>
+                    <field name="excise_code" attrs="{'invisible': ['|',
+                                                                ('product_variant_count', '>', 1),
+                                                                ('type', '=', 'service')]}" />
+                    <field name="dkpp" attrs="{'invisible': ['|',
+                                                             ('product_variant_count', '>', 1),
+                                                             ('type', '&lt;&gt;', 'service')]}" />
+                    <field name="vd_sgt" attrs="{'invisible': [('product_variant_count', '>', 1)]}" />
+                    <field name="exemption" attrs="{'invisible': [('product_variant_count', '>', 1)]}" />
+                    <field name="prev_values" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="uktzed_product_normal_form_view" model="ir.ui.view">
+            <field name="name">product.product.form.uktzed</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="barcode" position="after">
+                    <field name="is_imported" attrs="{'invisible': [('type', '=', 'service')]}"/>
+                    <field name="ukt_zed_id" domain="[('item_count', '=', 0)]"/>
+                    <field name="excise_code" attrs="{'invisible': [('type', '=', 'service')]}"/>
+                    <field name="dkpp" attrs="{'invisible': [('type', '&lt;&gt;', 'service')]}"/>
+                    <field name="vd_sgt"/>
+                    <field name="exemption"/>
+                    <field name="prev_values" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="uktzed_product_variant_easy_edit_view" model="ir.ui.view">
+            <field name="name">product.product.form.easy.uktzed</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+            <field name="arch" type="xml">
+                <field name="default_code" position="after">
+                    <field name="is_imported" attrs="{'invisible': [('type', '=', 'service')]}"/>
+                    <field name="ukt_zed_id" domain="[('item_count', '=', 0)]" attrs="{'invisible': [('type', '=', 'service')]}"/>
+                    <field name="excise_code" attrs="{'invisible': [('type', '=', 'service')]}"/>
+                    <field name="dkpp" attrs="{'invisible': [('type', '&lt;&gt;', 'service')]}"/>
+                    <field name="vd_sgt"/>
+                    <field name="exemption"/>
+                    <field name="prev_values" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="uom_code_product_uom_form_view" model="ir.ui.view">
+            <field name="name">product.uom.form.code</field>
+            <field name="model">product.uom</field>
+            <field name="inherit_id" ref="product.product_uom_form_view"/>
+            <field name="arch" type="xml">
+                <field name="rounding" position="after">
+                    <field name="uom_code"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

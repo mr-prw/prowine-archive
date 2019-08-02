@@ -1,0 +1,13 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_account_taxinvoice_contrtype_user","access_account_taxinvoice_contrtype_user","model_account_taxinvoice_contrtype","account.group_account_invoice",1,0,0,0
+"access_account_taxinvoice_paymeth_user","access_account_taxinvoice_paymeth_user","model_account_taxinvoice_paymeth","account.group_account_invoice",1,0,0,0
+"access_account_taxinvoice_user","access_account_taxinvoice_user","model_account_taxinvoice","account.group_account_invoice",1,0,0,0
+"access_account_taxinvoice_line_user","access_account_taxinvoice_line_user","model_account_taxinvoice_line","account.group_account_invoice",1,0,0,0
+"access_account_taxinvoice_tax_user","access_account_taxinvoice_tax_user","model_account_taxinvoice_tax","account.group_account_invoice",1,0,0,0
+"access_account_sprsti_user","access_account_sprsti_user","model_account_sprsti","account.group_account_invoice",1,0,0,0
+"access_account_taxinvoice_contrtype_accountant","access_account_taxinvoice_contrtype_accountant","model_account_taxinvoice_contrtype","account.group_account_user",1,1,1,1
+"access_account_taxinvoice_paymeth_accountant","access_account_taxinvoice_paymeth_accountant","model_account_taxinvoice_paymeth","account.group_account_user",1,1,1,1
+"access_account_taxinvoice_accountant","access_account_taxinvoice_accountant","model_account_taxinvoice","account.group_account_user",1,1,1,1
+"access_account_taxinvoice_line_accountant","access_account_taxinvoice_line_accountant","model_account_taxinvoice_line","account.group_account_user",1,1,1,1
+"access_account_taxinvoice_tax_accountant","access_account_taxinvoice_tax_accountant","model_account_taxinvoice_tax","account.group_account_user",1,1,1,1
+"access_account_sprsti_accountant","access_account_sprsti_accountant","model_account_sprsti","account.group_account_user",1,1,1,1

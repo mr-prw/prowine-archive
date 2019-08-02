@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vehicle,access_vehicle,model_vehicle,stock.group_stock_user,1,1,1,1
+access_trailer_model,access_trailer_model,model_trailer_model,stock.group_stock_user,1,1,1,1
+access_trailer_type,access_trailer_type,model_trailer_type,stock.group_stock_user,1,1,1,1
+access_vehicle_brand,access_vehicle_brand,model_vehicle_brand,stock.group_stock_user,1,1,1,1
+access_vehicle_model,access_vehicle_model,model_vehicle_model,stock.group_stock_user,1,1,1,1
+access_vehicle_type,access_vehicle_type,model_vehicle_type,stock.group_stock_user,1,1,1,1
+access_vehicle_reg,access_vehicle_reg,model_vehicle_reg,stock.group_stock_user,1,1,1,1
+access_trailer,access_trailer,model_trailer,stock.group_stock_user,1,1,1,1
+access_trailer_brand,access_trailer_brand,model_trailer_brand,stock.group_stock_user,1,1,1,1
+access_trailer_reg,access_trailer_reg,model_trailer_reg,stock.group_stock_user,1,1,1,1
+access_type_transportation,access_type_transportation,model_type_transportation,stock.group_stock_user,1,1,1,1
+access_state,access_state,model_state,stock.group_stock_user,1,1,1,1

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_nova_poshta"
+  		name="Nova Poshta"
+        web_icon="nova_poshta_base,static/description/icon.png"
+  		sequence="1"/>
+
+    <menuitem id="menu_nova_poshta_catalog"
+  		name="Catalog"
+        parent="menu_nova_poshta"
+  		sequence="5"/>
+
+    <menuitem id="menu_nova_poshta_configuration"
+  		name="Configuration"
+        parent="menu_nova_poshta"
+  		sequence="20"/>
+
+</odoo>

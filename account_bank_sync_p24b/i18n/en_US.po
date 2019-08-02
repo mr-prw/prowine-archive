@@ -1,0 +1,294 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_bank_sync_p24b
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-15 10:33+0000\n"
+"PO-Revision-Date: 2016-06-15 10:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:368
+#, python-format
+msgid "%d transactions had already beenimported and were ignored."
+msgstr "%d transactions had already beenimported and were ignored."
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "01-02-03-04"
+msgstr "01-02-03-04"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:372
+#, python-format
+msgid "1 transaction had already been imported and was ignored."
+msgstr "1 transaction had already been imported and was ignored."
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/wizard/p24b_bank_sync_wizard.py:374
+#, python-format
+msgid "Already imported items"
+msgstr "Already imported items"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_bank_acc
+msgid "Bank Account Number"
+msgstr "Bank Account Number"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_journal_id
+msgid "Bank Journal for statement import"
+msgstr "Bank Journal for statement import"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_create_uid
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_create_date
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_display_name
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Enter OTP"
+msgstr "Enter OTP"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Failure"
+msgstr "Failure"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Failure!"
+msgstr "Failure!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_id
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_id
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_phone_id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_statement_import
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_sync
+msgid "Import Bank Statement"
+msgstr "Import Bank Statement"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Import Statement"
+msgstr "Import Statement"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_journal
+msgid "Journal"
+msgstr "Journal"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_journal_id
+msgid "Journal id"
+msgstr "Journal id"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync___last_update
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel___last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_write_uid
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_write_date
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_login
+msgid "Login"
+msgstr "Login"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_timeout
+msgid "Network delay in sec before exception"
+msgstr "Network delay in sec before exception"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Next"
+msgstr "Next"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Nothing to do"
+msgstr "Nothing to do"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_otp
+msgid "OTP"
+msgstr "OTP"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_journal_dashboard_view_inherit
+msgid "P24B Sync"
+msgstr "P24B Sync"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_passwd
+msgid "Password"
+msgstr "Password"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel_name
+msgid "Phone number"
+msgstr "Phone number"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Priovide Login and Password"
+msgstr "Priovide Login and Password"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_journal_p24_login
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_login
+msgid "Privat24 Login"
+msgstr "Privat24 Login"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_journal_p24_passwd
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_passwd
+msgid "Privat24 Password"
+msgstr "Privat24 Password"
+
+#. module: account_bank_sync_p24b
+#: model:ir.actions.act_window,name:account_bank_sync_p24b.p24b_action_account_bank_sync
+msgid "Privat24 Sync"
+msgstr "Privat24 Sync"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_journal.py:13
+#, python-format
+msgid "Privat24Business Import"
+msgstr "Privat24Business Import"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model,name:account_bank_sync_p24b.model_account_p24b_sync_phone_sel
+msgid "Privat24Business phone list"
+msgstr "Privat24Business phone list"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "PrivatBank Online Sync"
+msgstr "PrivatBank Online Sync"
+
+#. module: account_bank_sync_p24b
+#: code:addons/account_bank_sync_p24b/models/account_journal.py:22
+#, python-format
+msgid "Provide account number on bank journal!"
+msgstr "Provide account number on bank journal!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Provide your OTP"
+msgstr "Provide your OTP"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Provide your Privat24 login and Password"
+msgstr "Provide your Privat24 login and Password"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_phone_sel
+msgid "Select Phone"
+msgstr "Select Phone"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Select device"
+msgstr "Select device"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Select phone to send OTP"
+msgstr "Select phone to send OTP"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,task:0
+msgid "Send Payment"
+msgstr "Send Payment"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_session_id
+msgid "Session token"
+msgstr "Session token"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_state
+msgid "State to control wizard form"
+msgstr "State to control wizard form"
+
+#. module: account_bank_sync_p24b
+#: selection:account.p24b.sync,state:0
+msgid "Success"
+msgstr "Success"
+
+#. module: account_bank_sync_p24b
+#: model:ir.ui.view,arch_db:account_bank_sync_p24b.p24b_account_bank_sync_view
+msgid "Success!"
+msgstr "Success!"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_client_id
+#: model:ir.model.fields,help:account_bank_sync_p24b.field_account_p24b_sync_client_secret
+msgid "Taken from developer console"
+msgstr "Taken from developer console"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_task
+msgid "Task to sync with bank eg statement or Payment"
+msgstr "Task to sync with bank eg statement or Payment"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_client_id
+msgid "client_id"
+msgstr "client_id"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_client_secret
+msgid "client_secret"
+msgstr "client_secret"
+
+#. module: account_bank_sync_p24b
+#: model:ir.model.fields,field_description:account_bank_sync_p24b.field_account_p24b_sync_session_id
+msgid "session_id"
+msgstr "session_id"
+

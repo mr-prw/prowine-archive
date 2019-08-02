@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Wizard view -->
+        <record id="view_account_tax_invoice_import" model="ir.ui.view">
+            <field name="name">account.taxinvoice.import.form</field>
+            <field name="model">account.taxinvoice.import</field>
+            <field name="arch" type="xml">
+                <form string="Імпорт податкової накладної">
+                    <field name="state" invisible="1"/>
+                    <div>
+                        <h2>Імпорт отриманих ПН</h2>
+                        <p>Оберіть файл для завантаження:</p>
+                        <field name="fdata"
+                            placeholder="файл у форматі xml"
+                            class="oe_inline"
+                            filename="fname"/>
+                        <field name="fname" invisible="1"/>
+                    </div>
+                    <footer>
+                        <group>
+                            <button name="taxinvoice_import"
+                                string="Імпорт з XML"
+                                type="object"
+                                default_focus="1"
+                                class="btn-primary"/>
+                            <button string="Скасувати"
+                                class="btn-default"
+                                special="cancel" />
+                        </group>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- Action -->
+        <record id="import_in_tax_invoice_action" model="ir.actions.act_window">
+            <field name="name">Single Tax Invoice Import</field>
+            <field name="res_model">account.taxinvoice.import</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+           <field name="view_id" ref="view_account_tax_invoice_import"/>
+           <field name="target">new</field>
+        </record>
+        <!-- Menu entry Import in Tax Invoices -->
+        <menuitem action="import_in_tax_invoice_action"
+            id="menu_import_in_vat_invoice" name="Імпорт ПН"
+            parent="account.menu_finance_payables" sequence="52"/>
+</data>
+</odoo>

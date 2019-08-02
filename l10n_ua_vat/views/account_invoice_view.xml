@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="taxinvoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.taxinvoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/label[1]" position="before">
+                    <div class="oe_button_box" name="button_box">
+                         <button name="action_view_taxinvoices"
+                             type="object"
+                             class="oe_stat_button"
+                             icon="fa-file-o"
+                             attrs="{'invisible': [('tax_invoice_count', '=', 0)]}">
+                             <field name="tax_invoice_count" widget="statinfo" string="Податкова"/>
+                         </button>
+                     </div>
+                </xpath>
+                <xpath expr="//button[@name='action_invoice_draft']" position="after">
+                    <field name="fully_tax_invoiced" invisible="1"/>
+                    <button name="tax_invoice_create"
+                        type="object"
+                        class="oe_highlight"
+                        string="Створити ПН"
+                        groups="base.group_user"
+                        attrs="{
+                            'invisible': ['|',('fully_tax_invoiced', '=', True),('state', 'not in', ['open', 'paid'])],
+                        }"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="intaxinvoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.intaxinvoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/div[1]" position="before">
+                    <div class="oe_button_box" name="button_box">
+                         <button name="action_view_taxinvoices"
+                             type="object"
+                             class="oe_stat_button"
+                             icon="fa-file-o"
+                             attrs="{'invisible': [('tax_invoice_count', '=', 0)]}">
+                             <field name="tax_invoice_count" widget="statinfo" string="Податкова"/>
+                         </button>
+                     </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_payment_invoice_form_inherited_p24b" model="ir.ui.view">
+            <field name="name">account.payment.invoice.form.inherited.p24b</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_invoice_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='communication']" position="after">
+                    <field name="hide_p24b" invisible="1"/>
+                    <button
+                        name="p24_payment_export"
+                        class="oe_highlight"
+                        string="Export to Privat24"
+                        type="object"
+                         attrs="{'invisible': [('hide_p24b', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_account_payment_form_inherited_p24b" model="ir.ui.view">
+            <field name="name">account.payment.form.inherited.p24b</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account.view_account_payment_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='communication']" position="after">
+                    <field name="hide_p24b" invisible="1"/>
+                    <button
+                        name="p24_payment_export"
+                        class="oe_highlight"
+                        string="Export to Privat24"
+                        type="object"
+                         attrs="{'invisible': [('hide_p24b', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="account_payment_method_p24b_out" model="account.payment.method">
+            <field name="name">Privat24</field>
+            <field name="code">p24b</field>
+            <field name="payment_type">outbound</field>
+        </record>
+    </data>
+
+</odoo>

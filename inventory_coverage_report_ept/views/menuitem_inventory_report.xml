@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<!-- Main Menu -->
+	 <menuitem id="menu_forecast_sale_ept_root" 
+	 	name="Forecast Sale" 
+	 	parent='stock.menu_stock_root' 
+	 	sequence="3" 
+	 	groups="inventory_coverage_report_ept.group_forecast_sale_ept"
+	 	/>
+	 	
+	 
+	 <!-- Forecast Sales --> 
+	 
+	
+	<menuitem id="forcast_sale_ept_sub_menu_item" name="Forecast Sales"
+		parent="menu_forecast_sale_ept_root" action="forecast_sale_ept_action_window"
+		sequence="10" />
+	 		
+	<menuitem id="import_forecast_sales_menu_items" name="Import / Export"
+		action="import_forecast_sales_ept_window_action" parent="menu_forecast_sale_ept_root"
+		sequence="20"  />	
+	<!--  Forecast Sales Rule -->
+	<menuitem id="menu_forecast_sale_rule_main_menu_ept" name="Forecast Sales Rule"
+		parent="menu_forecast_sale_ept_root" sequence="60" />
+		
+		
+	<menuitem id="forecast_sale_rule_ept_menu_item_id" name="Forecast Sales Rule"
+		parent="menu_forecast_sale_rule_main_menu_ept" action="forecast_sale_rule_ept_action_window_id"
+		sequence="50"/>
+	
+	<menuitem id="import_forecast_sales_rule_menu_items" name="Import / Export"
+			action="import_forecast_sales_rule_ept_action" parent="menu_forecast_sale_rule_main_menu_ept"
+			sequence="70"/>
+			
+	<menuitem id="requisition_fiscal_period_menu_items" name="Periods"
+		parent="menu_forecast_sale_ept_root" action="requisition_period_ept_window_id"
+		sequence="70" />		
+	
+	<menuitem id="requisition_fiscal_year_menu_items" name="Years"
+		parent="menu_forecast_sale_ept_root" action="requisition_fiscal_year_ept_action_window_id"
+		sequence="80" />
+		
+		
+	<menuitem id="menu_inventory_coverage_report_ept" name="Inventory Coverage"
+	action="action_inventory_coverage_report_ept" parent="stock.menu_warehouse_report"
+	sequence="90" />
+	
+	<menuitem id="menu_requisition_product_suggestion_ept" name=" Product Recommendation"
+	action="action_requisition_product_suggestion_ept" parent="stock.menu_warehouse_report"
+	sequence="95" />
+	
+	<menuitem id="menu_forecast_sale_ept_reports_root" name="Reports"
+			parent="menu_forecast_sale_ept_root" sequence="90" />
+				
+		 <menuitem id="menu_forecast_sale_ept_report" name="Forecast Sales"
+			parent="menu_forecast_sale_ept_reports_root" action="action_forecast_sales_ept_report"
+			sequence="10" />
+		
+		
+		<menuitem id="menu_forecast_and_actual_sales_report" name="Forecast v/s Actual Sales"
+			parent="menu_forecast_sale_ept_reports_root" action="action_forecasted_and_actual_sales_report_all"
+			sequence="20"/>	
+	
+
+	<!--  Logs -->
+	<menuitem id="menu_requisition_logs_ept" name="Logs" parent="menu_forecast_sale_ept_root" 
+		action='action_requisition_log' sequence="100" />
+</odoo>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+<!-- Form of Tax Invoice -->
+        <record id="tax_invoice_form_view" model="ir.ui.view">
+            <field name="name">taxinvoice.form</field>
+            <field name="model">account.taxinvoice</field>
+            <field name="arch" type="xml">
+                <form string="Форма податкової накладної">
+                    <header>
+                        <button name="action_ready"
+                            type="object"
+                            states="draft"
+                            string="Підтвердити"
+                            class="oe_highlight"
+                            groups="account.group_account_invoice"/>
+                        <button name="%(action_account_single_tax_invoice_export)d"
+                            string="Вивантажити в xml"
+                            type="action"
+                            class="oe_highlight"
+                            attrs="{'invisible': ['|',('state', 'in', ['draft', 'cancel']), ('category', '=', 'in_tax_invoice')]}"
+                            groups="base.group_user"/>
+                        <button name="action_sent"
+                            type="object"
+                            states="ready"
+                            string="Відправлено в ЄРПН"
+                            groups="account.group_account_invoice"/>
+                        <button name="action_registered"
+                            type="object"
+                            states="sent"
+                            string="Зареєстровано в ЄРПН"
+                            class="oe_highlight"
+                            groups="account.group_account_invoice"/>
+                        <button name="action_cancel"
+                            type="object"
+                            states="draft,ready"
+                            string="Скасувати"
+                            groups="account.group_account_invoice"/>
+                        <button name="action_draft"
+                            type="object"
+                            states="cancel"
+                            string="Зробити чернеткою"
+                            groups="account.group_account_invoice"/>
+                        <field name="state" widget="statusbar"
+                            statusbar_visible="draft,ready,sent,registered"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                Податкова накладна
+                            </h1>
+                        </div>
+                        <field name="doc_type" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="date_vyp"/>
+                                <field name="signer_id"
+                                  attrs="{'required': [('category', '=', 'out_tax_invoice')]}" invisible="1"/>
+                                <field name="responsible_employee_id"/>
+                                <field name="partner_id"
+                                    string="Партнер"/>
+                                <field name="ipn_partner"
+                                    string="ІПН партнера"/>
+                                <field name="kod_filii"
+                                    string="Код філії партнера"/>
+                                <field name="category" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="number" placeholder="Генерується автоматично"/>
+                                <field name="number1" placeholder="2, 3 або 5"/>
+                                <field name="date_reg"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Номенклатура">
+
+                                <field name="taxinvoice_line_ids" widget="one2many_list">
+                                    <tree editable="bottom" string="Рядки ПН">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id"/>
+                                        <field name="name"/>
+                                        <field name="ukt_zed_id" groups="base.group_no_one"/>
+                                        <field name="is_imported" groups="base.group_no_one"/>
+                                        <field name="dkpp" groups="base.group_no_one"/>
+                                        <field name="uom_id"/>
+                                        <field name="uom_code" groups="base.group_no_one"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                        <field name="price_unit_wo_tax"/>
+                                        <field name="discount"
+                                            groups="sale.group_discount_per_so_line"/>
+                                        <field name="price_subtotal"/>
+                                        <field name="taxinvoice_line_tax_id"
+                                            context="{'category':parent.category}"
+                                            options="{'no_create': True}"/>
+                                        <field name="account_id"
+                                            groups="base.group_no_one"
+                                            domain="[('company_id', '=', parent.company_id)]"/>
+                                        <field name="kod_pilg" groups="base.group_no_one"/>
+                                        <field name="tax_amount"/>
+                                    </tree>
+                                </field>
+                                <group>
+                                    <group>
+                                        <div class="oe_inline">
+                                            <field name="tax_line_ids">
+                                                <tree editable="bottom" string="Податки">
+                                                    <field name="name"/>
+                                                    <field name="tax_id" invisible="1"/>
+                                                    <field name="account_analytic_id" invisible="1"/>
+                                                    <field name="sequence" invisible="1"/>
+                                                    <field name="manual" invisible="1"/>
+                                                    <field name="account_id"
+                                                        groups="account.group_account_invoice"/>
+                                                    <field name="base"/>
+                                                    <field name="amount"/>
+                                                    <field name="currency_id" invisible="1"/>
+                                                </tree>
+                                            </field>
+                                        </div>
+                                    </group>
+                                    <group class="oe_subtotal_footer oe_right">
+                                        <field name="amount_untaxed"/>
+                                        <field name="amount_tax"/>
+                                        <field name="amount_total"
+                                            class="oe_subtotal_footer_separator"/>
+                                    </group>
+                            </group>
+                            </page>
+
+                            <page string="Додатково">
+                                <group>
+                                    <group>
+                                        <field name="h03"/>
+                                        <field name="category"/>
+                                        <field name="number2"/>
+                                        <field name="currency_id"/>
+                                        <field name="company_id"/>
+                                        <field name="account_id"
+                                            groups="account.group_account_manager"
+                                            domain="[('company_id', '=', company_id)]"/>
+                                    </group>
+                                    <group>
+                                        <field name="horig1"/>
+                                        <field name="htypr"/>
+                                        <field name="doc_type"/>
+                                        <field name="journal_id"
+                                            groups="account.group_account_user"
+                                            options="{'no_create': True}"/>
+                                        <field name="move_id"
+                                            groups="account.group_account_manager"
+                                            attrs="{'invisible': [('move_id', '=', False)]}"/>
+                                        <field name="commercial_partner_id" invisible="1"/>
+                                        <field name="invoice_id"/>
+                                        <field name="prych_zv"/>
+                                        <field name="amount_tara"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+<!-- Tree view of tax invoices -->
+        <record id="tax_invoice_tree_view" model="ir.ui.view">
+            <field name="name">taxinvoice.tree</field>
+            <field name="model">account.taxinvoice</field>
+            <field name="arch" type="xml">
+                <tree string="Список ПН" default_order="date_vyp desc, partner_id desc, id desc"
+                      decoration-warning="registration_deadline&gt;=current_date
+                                          and current_date&gt;=danger_date
+                                          and state in ('draft', 'ready', 'sent')"
+                      decoration-danger="current_date&gt;registration_deadline
+                                         and state in ('draft', 'ready', 'sent')">
+                    <field name="number"/>
+                    <field name="date_vyp"/>
+                    <field name="date_reg"/>
+                    <field name="registration_deadline"/>
+                    <field name="partner_id"/>
+                    <field name="ipn_partner"/>
+                    <field name="company_id"/>
+                    <field name="amount_untaxed" sum="Без ПДВ"/>
+                    <field name="amount_tax" sum="ПДВ"/>
+                    <field name="amount_total" sum="Всього з ПДВ"/>
+                    <field name="state"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="journal_id" invisible="1"/>
+                    <field name="danger_date" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+<!-- Calendar view of of tax invoices -->
+      <record id="tax_invoice_calendar_view" model="ir.ui.view">
+            <field name="name">taxinvoice.calendar</field>
+            <field name="model">account.taxinvoice</field>
+            <field name="arch" type="xml">
+                <calendar string="Видані/отримані податкові накладні"
+                          color="state" mode="month"
+                          date_start="date_vyp"
+                          date_stop="registration_deadline"
+                          quick_add="False">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="signer_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <!--Add search by Category  -->
+        <record id="tax_invoice_view_filter" model="ir.ui.view">
+            <field name="name">taxinvoice.list.select</field>
+            <field name="model">account.taxinvoice</field>
+            <field name="arch" type="xml">
+                <search string="Пошук за категорією">
+                    <field name="category"/>
+                    <filter name="draft" string="Чорнові ПН" domain="[('state', '=', 'draft' )]"/>
+                    <filter name="ready" string="Підготовлені ПН" domain="[('state', '=', 'ready')]"/>
+                    <filter name="sent" string="Відправлені ПН" domain="[('state', '=', 'sent')]"/>
+                    <filter name="registered" string="Зареєстровані ПН" domain="[('state', '=', 'registered')]"/>
+                    <filter name="cancel" string="Скасовані ПН" domain="[('state', '=', 'cancel')]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Партнер" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="ІПН Партнера" domain="[]" context="{'group_by':'ipn_partner'}"/>
+                        <filter string="Дата складання" domain="[]" context="{'group_by':'date_vyp'}"/>
+                        <filter string="Статус" domain="[]" context="{'group_by':'state'}"/>
+                        <filter string="Відповідальна особа" domain="[]" context="{'group_by':'signer_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+<!-- List of Customer Tax Invoices -->
+        <record id="customer_tax_invoice_list_action" model="ir.actions.act_window">
+            <field name="name">Видані податкові накладні</field>
+            <field name="res_model">account.taxinvoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="search_view_id" ref="tax_invoice_view_filter"/>
+            <field name="domain">[]</field>
+            <field name="context">{'default_category':'out_tax_invoice', 'category':'out_tax_invoice', 'search_default_category':'out_tax_invoice'}</field>
+            <field eval="True" name="filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Створіть першу видану податкову накладну.
+                </p>
+            </field>
+        </record>
+
+<!-- List of Supplier Tax Invoices -->
+        <record id="supplier_tax_invoice_list_action" model="ir.actions.act_window">
+            <field name="name">Отримані податкові накладні</field>
+            <field name="res_model">account.taxinvoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="search_view_id" ref="tax_invoice_view_filter"/>
+            <field name="domain">[]</field>
+            <field name="context">{'default_category':'in_tax_invoice', 'category':'in_tax_invoice', 'search_default_category':'in_tax_invoice'}</field>
+            <field eval="True" name="filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Створіть першу отриману податкову накладну.
+                </p>
+            </field>
+        </record>
+
+<!-- Payment method list -->
+        <record id="ti_paymeth_tree_view" model="ir.ui.view">
+            <field name="name">tipaymeth.tree</field>
+            <field name="model">account.taxinvoice.paymeth</field>
+            <field name="arch" type="xml">
+                <tree string="Спосіб оплати">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+<!-- Menu entry Customer Tax Invoices -->
+        <menuitem action="customer_tax_invoice_list_action"
+            id="menu_customer_vat_invoices" name="Видані ПН"
+            parent="account.menu_finance_receivables" sequence="51"/>
+
+<!-- Menu entry Supplier Tax Invoices -->
+        <menuitem action="supplier_tax_invoice_list_action"
+            id="menu_supplier_vat_invoices" name="Отримані ПН"
+            parent="account.menu_finance_payables" sequence="51"/>
+    </data>
+</odoo>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <act_window id="action_nova_poshta_warehouse_tree"
+  		name="Warehouses"
+  		res_model="nova.poshta.warehouse"
+  		view_mode="tree,form" />
+
+    <menuitem id="menu_nova_poshta_warehouse"
+  		name="Warehouses"
+        parent="menu_nova_poshta_catalog"
+  		sequence="10"
+        action="action_nova_poshta_warehouse_tree"/>
+
+    <record id="nova_poshta_warehouse_view_form" model="ir.ui.view">
+        <field name="name">nova.poshta.warehouse.view.form</field>
+        <field name="model">nova.poshta.warehouse</field>
+        <field name="arch" type="xml">
+            <form edit="false" create="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h3><field name="name" placeholder="Warehouse Name"/></h3>
+                    </div>
+                    <group>
+                        <field name="name_ru" />
+                        <field name="site_key"/>
+                        <field name="type" />
+                        <field name="number" />
+                    </group>
+                    <group>
+                        <field name="city_ref" />
+                        <field name="city_description" />
+                        <field name="city_description_ru" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="nova_poshta_warehouse_view_tree" model="ir.ui.view">
+        <field name="name">nova.poshta.warehouse.view.tree</field>
+        <field name="model">nova.poshta.warehouse</field>
+        <field name="arch" type="xml">
+            <tree edit="false" create="false">
+                <field name="city_ref"/>
+                <field name="type"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

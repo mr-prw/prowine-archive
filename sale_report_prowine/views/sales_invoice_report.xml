@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <template id="report_invoice_document_prowine_with_payment" inherit_id="account.report_invoice_document_with_payments" primary="True">
+
+             <xpath expr="//h2" position="replace">
+                 <h2>
+                     <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Sales Invoice №</span>
+                     <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">Sales Invoice (Proforma)</span>
+                     <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Sales Invoice</span>
+                     <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Sales Invoice (canceled)</span>
+                     <span t-if="o.type == 'out_refund'">Sales Invoice (return)</span>
+                     <span t-if="o.type == 'in_refund'">Profitable bill of lading(return)</span>
+                     <span t-if="o.type == 'in_invoice'">Profitable bill of lading №</span>
+                     <span t-field="o.number"/>
+                 </h2>
+             </xpath>
+
+             <xpath expr="//div[@class='row mt32 mb32']/div[6]" position="after">
+                 <t t-foreach="o.invoice_line_ids.sorted(key=lambda m: m.account_analytic_id)[0]" t-as="l">
+                     <div t-if="l.account_analytic_id.tag_ids.name" class="col-xs-3">
+                         <strong>Analytic account:</strong>
+                         <p t-field="l.account_analytic_id.tag_ids.name"/>
+                         <p t-field="l.account_analytic_id.name"/>
+                     </div>
+                 </t>
+             </xpath>
+
+             <xpath expr="//table[@name='invoice_line_table']" position="replace">
+                <table class="table table-condensed" name="invoice_line_table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th class="hidden">Source Document</th>
+                                <th class="text-right">Quantity/<br/>per Package</th>
+                                <th>Volume</th>
+                                <th>Weight</th>
+                                <th class="text-right">Price with VAT/Unit</th>
+                                <th t-if="display_discount" class="text-right">Disc.(%)</th>
+                                <th class="text-right">Amount without VAT</th>
+                                <th class="text-right">Taxes</th>
+                                <th class="text-right">Total with VAT</th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+
+                            <tr t-foreach="o.invoice_line_ids.sorted(key=lambda m: m.product_id.id)" t-as="l">
+
+                                <td><span t-field="l.name"/>
+                                    <div t-if="l.product_id.barcode">Barcode<b>:</b> <span t-field="l.product_id.barcode"/></div>
+                                    <div t-if="l.product_id.ukt_zed_id.name">Product Classification ZED<b>:</b> <span t-field="l.product_id.ukt_zed_id.name"/></div>
+                                    <div t-if="l.product_id.excise_code">Excise Code<b>:</b> <span t-field="l.product_id.excise_code"/></div>
+                                </td>
+                                <td class="hidden"><span t-field="l.origin"/></td>
+                                <td class="text-right">
+                                    <div>
+                                        <span t-field="l.quantity"/>
+                                        <span t-field="l.uom_id"  groups="product.group_uom"/>
+                                    </div>
+                                    <hr/>
+                                    <div>
+                                        <span t-field="l.product_id.packaging_ids.qty"/>
+                                    </div>
+                                </td>
+
+                                <td><span t-field="l.product_id.volume"/></td>
+                                <td><span t-field="l.product_id.weight"/></td>
+                                <td class="text-right">
+                                    <span t-field="l.price_unit"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                    <div style="font-size: 7pt;">
+                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.invoice_line_tax_ids))"/>
+                                    </div>
+                                </td>
+                                <td t-if="display_discount" class="text-right"><span t-field="l.discount"/></td>
+                                <td class="text-right" id="subtotal">
+                                    <span t-field="l.price_subtotal"
+                                        t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.amount_tax"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_total"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                </td>
+                            </tr>
+                        </tbody>
+                </table>
+             </xpath>
+
+             <xpath expr="//div[@id='total']" position="replace">
+                 <div id="total" class="row" style="page-break-inside:avoid;">
+                     <div class="col-xs-4 pull-right">
+                         <table class="table table-condensed" style="min-width: 250px;max-width: 400px;">
+                             <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                                 <td><strong>Subtotal without VAT</strong></td>
+                                 <td class="text-right">
+                                     <span t-field="o.amount_untaxed" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                 </td>
+                             </tr>
+                             <t t-foreach="o._get_tax_amount_by_group()" t-as="amount_by_group">
+                                 <tr style="border-bottom:1px solid #dddddd;">
+                                     <t t-if="len(o.tax_line_ids) == 1 and o.amount_untaxed == amount_by_group[2]">
+                                         <td>
+                                             <span t-esc="amount_by_group[0]"/>
+                                             <!--<span>&amp;nbsp;-->
+                                                 <!--<t t-esc="amount_by_group[4]"/>-->
+                                             <!--</span>                                          -->
+                                         </td>
+                                         <td class="text-right">
+                                             <span t-esc="amount_by_group[3]"/>
+                                         </td>
+                                     </t>
+                                     <t t-else="">
+                                         <td><span t-esc="amount_by_group[0]"/></td>
+                                         <td class="text-right">
+                                             <span t-esc="amount_by_group[3]" />
+                                         </td>
+                                     </t>
+                                 </tr>
+                             </t>
+                             <tr class="border-black">
+                                 <td><strong>Total with VAT</strong></td>
+                                 <td class="text-right">
+                                     <span t-field="o.amount_total" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                                 </td>
+                             </tr>
+                         </table>
+                     </div>
+                 </div>
+             </xpath>
+
+             <xpath expr="//div[@class='page']/div[@class='row'][1]" position="replace">
+                 <br/>
+                 <div class="row">
+                     <div t-if="o.partner_shipping_id" class="col-xs-5 col-xs-offset-1">
+                         <strong>Delivery customer address:</strong>
+                         <address t-field="o.partner_shipping_id"
+                              t-options='{"widget": "contact", "fields": ["address", "mobile", "email"], "no_marker": True}' />
+                     </div>
+
+                     <div name="invoice_address" class="col-xs-4">
+                         <strong>Buyer:</strong>
+                         <nobr t-field="o.partner_id.commercial_partner_id" t-options='{"widget": "contact", "fields": ["address", "name","phone", "mobile", "email"], "no_marker": True}'/>
+                         <nobr t-if="o.partner_id.commercial_partner_id.company_registry">ЄДРПОУ: <span t-field="o.partner_id.commercial_partner_id.company_registry"/><br/></nobr>
+                         <nobr t-if="not o.partner_id.commercial_partner_id.default_ipn and o.partner_id.commercial_partner_id.vat" class="mt16">TIN: <span t-field="o.partner_id.commercial_partner_id.vat"/></nobr>
+                    </div>
+                 </div>
+             </xpath>
+
+             <xpath expr="//div[@class='page']/p[3]" position="after">
+                <br/>
+                 <div class="row" style="page-break-inside:avoid;">
+                     <div class="col-xs-6">
+                         <strong>Product load: </strong><br/><span>manager logistics</span><br/><span t-field="o.sale_id.warehouse_id.employee_id.name"/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <div style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"/>
+                         <p style="padding: 5;" align="center"><sub>(signature)</sub></p>
+
+                     </div>
+                     <div class="col-xs-6">
+                         <strong>Product receive: </strong>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <br/>
+                         <div style="width: 100%; border-bottom: 1px solid black; padding-left: 0.8em;"/>
+                         <p style="padding: 5;" align="center"><sub>(signature)</sub></p>
+                     </div>
+                 </div>
+             </xpath>
+        </template>
+
+        <template id="report_prowine">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="sale_report_prowine.report_invoice_document_prowine_with_payment" t-lang="o.partner_id.lang"/>
+                </t>
+            </t>
+        </template>
+
+        <report
+            id="action_report_prowine"
+            string="Sales Invoice"
+            model="account.invoice"
+            report_type="qweb-pdf"
+            name="sale_report_prowine.report_prowine"
+            file="sale_report_prowine.report_prowine"
+            menu="True"/>
+    </data>
+</odoo>

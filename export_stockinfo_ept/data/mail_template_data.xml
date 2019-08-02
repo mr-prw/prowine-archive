@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="mail_template_export_stockinfo_report_ept" model="mail.template">
+			<field name="name">Export Stockinfo Report Send by Email</field>
+			<field name="email_from">${object.env.user.company_id.partner_id.email or ''}</field>
+			<field name="subject">Export Stockinfo Report For ${(datetime.datetime.now().strftime('%d-%m-%Y'))}</field>
+			<field name="model_id" ref="export_stockinfo_ept.model_export_stockinfo_report_ept" />
+			<field name="auto_delete" eval="True" />
+			<field name="body_html"><![CDATA[
+					<p>Hello,</p>
+                        
+                    <p>Please find attached report.</p>
+                    <p>Thank you.</p>
+					
+			]]></field>
+		</record>
+	</data>
+</odoo>

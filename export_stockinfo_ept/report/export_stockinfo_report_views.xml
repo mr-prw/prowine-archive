@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="export_stockinfo_report_pdf_layout">
+		<div class="header">
+			<h1 style="height:15mm;" />
+			<div>
+				<span
+					style="font-family:Montserrat;font-size:16pt;color:black;font-weight:bold;margin-left:250px">Products Stock Info</span>
+			</div>
+		</div>
+		<div class="page">
+			<t t-foreach="data['single_data_dict']" t-as="product_record">
+				<div style="page-break-after: always;">
+					<t t-foreach="data['get_warehouse_or_loc']" t-as="warehouse">
+						<t t-if="warehouse.id==product_record">
+							<div class="act_as_table data_table" style="width: 100%;">
+								<div class="act_as_row labels">
+									<div class="act_as_cell">Report Date</div>
+									<div class="act_as_cell">Warehouse</div>
+								</div>
+								<div class="act_as_row">
+									<div class="act_as_cell">
+										<span t-raw="data['get_date']" />
+									</div>
+									<div class="act_as_cell">
+										<span t-raw="warehouse.name" />
+									</div>
+								</div>
+							</div>
+						</t>
+					</t>
+					<div class="act_as_table list_table" style="margin-top: 10px;" />
+					<div class="act_as_table data_table" style="width: 100%;">
+						<t t-call="export_stockinfo_ept.report_stockinfo_lines_header" />
+						<t t-foreach="data['all_product_ids']" t-as="product">
+							<div class="act_as_row lines">
+								<div class="act_as_cell left">
+									<span style="font-family:Montserrat;color:#875A7B;font-weight:bold">
+										<t t-raw="product.default_code" />
+									</span>
+								</div>
+								<div class="act_as_cell left">
+									<span style="font-family:Montserrat;color:#875A7B;font-weight:bold">
+										<t t-raw="product.name" />
+									</span>
+								</div>
+								<div class="act_as_cell right">
+									<span style="font-family:Montserrat;color:#1C09AE;">
+										<t t-raw='"%.2f" % product.standard_price' />
+									</span>
+								</div>
+
+								<div class="act_as_cell right">
+									<t
+										t-if="o.is_display_red==True and data['single_data_dict'].get(product_record).get(product.id,{}).get('qty_avaialable',0) &lt; 0.0">
+										<span style="font-family:Montserrat;background-color:#ea1313;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0)' />
+										</span>
+									</t>
+									<t
+										t-if="o.is_display_red == True and data['single_data_dict'].get(product_record).get(product.id,{}).get('qty_available' ,0) &gt;= 0.0">
+										<span style="font-family:Montserrat;color:#CE5780;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0)' />
+										</span>
+									</t>
+									<t t-if="o.is_display_red != True">
+										<span style="font-family:Montserrat;color:#CE5780;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0)' />
+										</span>
+									</t>
+								</div>
+								<div class="act_as_cell right">
+									<t
+										t-if="o.is_display_red == True and data['single_data_dict'].get(product_record).get(product.id,{}).get('incoming_qty',0)  &lt; 0.0">
+										<span style="font-family:Montserrat;background-color:#ea1313;">
+											<t
+												t-raw='"%.2f" %  data["single_data_dict"].get(product_record).get(product.id,{}).get("incoming_qty",0)' />
+										</span>
+									</t>
+									<t
+										t-if="o.is_display_red == True and data['single_data_dict'].get(product_record).get(product.id,{}).get('incoming_qty',0)  &gt;= 0.0">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" %  data["single_data_dict"].get(product_record).get(product.id,{}).get("incoming_qty",0)' />
+										</span>
+									</t>
+									<t t-if="o.is_display_red !=True">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" %  data["single_data_dict"].get(product_record).get(product.id,{}).get("incoming_qty",0)' />
+										</span>
+									</t>
+
+								</div>
+								<div class="act_as_cell right">
+									<t
+										t-if="o.is_display_red == True and data['single_data_dict'].get(product_record).get(product.id,{}).get('outgoing_qty',0) &lt; 0.0">
+										<span style="font-family:Montserrat;background-color:#ea1313;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0)' />
+										</span>
+									</t>
+									<t
+										t-if="o.is_display_red ==True and data['single_data_dict'].get(product_record).get(product.id,{}).get('outgoing_qty',0) &gt;=0.0 ">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0)' />
+										</span>
+									</t>
+									<t t-if="o.is_display_red !=True">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0)' />
+										</span>
+									</t>
+								</div>
+								<div class="act_as_cell right">
+									<t
+										t-if="o.is_display_red == True and (data['single_data_dict'].get(product_record).get(product.id,{}).get('qty_available',0) - data['single_data_dict'].get(product_record).get(product.id,{}).get('outgoing_qty',0)) &lt; 0.0 ">
+										<span style="font-family:Montserrat;background-color:#ea1313;">
+											<t
+												t-raw='"%.2f" %  (data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0) - data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0))' />
+										</span>
+									</t>
+									<t
+										t-if="o.is_display_red == True and (data['single_data_dict'].get(product_record).get(product.id,{}).get('qty_available',0) - data['single_data_dict'].get(product_record).get(product.id,{}).get('outgoing_qty',0)) &gt;= 0.0 ">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" %  (data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0) - data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0))' />
+										</span>
+									</t>
+									<t t-if="o.is_display_red !=True">
+										<span style="font-family:Montserrat;color:#F57C00;">
+											<t
+												t-raw='"%.2f" %  (data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0) - data["single_data_dict"].get(product_record).get(product.id,{}).get("outgoing_qty",0))' />
+										</span>
+									</t>
+
+								</div>
+								<div class="act_as_cell right">
+									<t
+										t-if="o.is_display_red == True  and data['single_data_dict'].get(product_record).get(product.id,{}).get('virtual_available',0) &lt; 0.0">
+										<span style="font-family:Montserrat;background-color:#ea1313;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("virtual_available",0)' />
+										</span>
+									</t>
+									<t
+										t-if="o.is_display_red == True and data['single_data_dict'].get(product_record).get(product.id,{}).get('virtual_available',0) &gt;= 0.0">
+										<span style="font-family:Montserrat;color:#CE5780;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("virtual_available",0)' />
+										</span>
+									</t>
+									<t t-if="o.is_display_red !=True">
+										<span style="font-family:Montserrat;color:#CE5780;">
+											<t
+												t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("virtual_available",0)' />
+										</span>
+									</t>
+								</div>
+								<div class="act_as_cell right">
+									<span style="font-family:Montserrat;color:#6D4C41;">
+										<t
+											t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("sold",0)' />
+									</span>
+								</div>
+								<div class="act_as_cell right">
+									<span style="font-family:Montserrat;color:#6D4C41;">
+										<t
+											t-raw='"%.2f" % data["single_data_dict"].get(product_record).get(product.id,{}).get("purchased",0)' />
+									</span>
+								</div>
+								<div class="act_as_cell right" style="width: 1000px;">
+									<span style="font-family:Montserrat;color:#4E342E;">
+										<t t-if="product.cost_method != 'real'">
+											<t
+												t-raw='"%.2f" % ((float(data["single_data_dict"].get(product_record).get(product.id,{}).get("qty_available",0))) * product.standard_price)' />
+										</t>
+										<t t-if="product.cost_method == 'real'">
+											<t
+												t-raw='"%.2f" % (data["single_data_dict"].get(product_record).get(product.id,{}).get("valuation",0))' />
+										</t>
+									</span>
+								</div>
+							</div>
+						</t>
+					</div>
+				</div>
+			</t>
+		</div>
+
+	</template>
+
+	<template id="export_stockinfo_ept.report_stockinfo_lines_header">
+		<!-- Display table headers for lines -->
+		<div class="act_as_thead">
+			<div class="act_as_row labels">
+				<div class="act_as_cell first_column" style="vertical-align:middle;width: 5.74%;">Odoo SKU </div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 8.77%">Product Name</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Cost Price</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Available Qty</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.571%;">Incoming Qty </div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Outgoing Qty</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Net On Hand</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.571%;">Forecasted Stock</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Total Sold Qty</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Total Purchased Qty</div>
+				<div class="act_as_cell" style="vertical-align:middle; width: 6.57%;">Valuation</div>
+			</div>
+		</div>
+	</template>
+
+	
+	<template id="export_stockinfo_report_pdf_ept">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="export_stockinfo_ept.internal_layout">
+					<t t-call="export_stockinfo_ept.export_stockinfo_report_pdf_layout" />
+				</t>
+			</t>
+		</t>
+	</template>
+</odoo>

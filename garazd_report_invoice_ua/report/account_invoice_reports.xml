@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_invoice_ua"
+            string="Invoice for UA"
+            model="account.invoice"
+            report_type="qweb-pdf"
+            name="garazd_report_invoice_ua.report_invoice_ua_template"
+            file="garazd_report_invoice_ua.report_invoice_ua_template"
+            print_report_name="'Invoice %s' % (object.number)"
+        />
+    </data>
+</odoo>

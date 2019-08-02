@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+     <record id="gen_partner_wizard_view" model="ir.ui.view">
+        <field name="name">wizard for import partner from csv and excel file </field>
+        <field name="model">gen.partner</field>
+        <field name="arch" type="xml">
+            <form string="Import Partner">
+                <group>
+                    <field name="file" filename="name"/>
+                </group>
+                <footer>
+                    <button name="import_partner" string="Import" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+        <record id="action_gen_partner_import_wizard" model="ir.actions.act_window">
+            <field name="name">Import Partner</field>
+            <field name="res_model">gen.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+   <menuitem action="action_gen_partner_import_wizard"
+    id="gen_partner_import_menu"
+     parent="sale.menu_sales_config"
+      />
+
+  </data>
+</openerp>
+ 

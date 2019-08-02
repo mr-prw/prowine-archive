@@ -1,0 +1,21 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- Поле ЕДРПОУ на вкладці бухобліку для форми партнери -->
+    <record model="ir.ui.view" id="view_sti_company_form">
+        <field name="name">res.company.sti</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="company_registry" position="after">
+                <field name="kod_filii"/>
+                <field name="comp_sti" required="1"/>
+                <field name="vat_account_id"/>
+                <field name="legal_status"/>
+            </field>
+        </field>
+    </record>
+
+    </data>
+</odoo>

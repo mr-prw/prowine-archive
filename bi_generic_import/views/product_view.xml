@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+     <record id="gen_product_wizard_view" model="ir.ui.view">
+        <field name="name">wizard for import product from csv and excel file </field>
+        <field name="model">gen.product</field>
+        <field name="arch" type="xml">
+            <form string="Import Product">
+                <group>
+                    <field name="file" filename="name"/>
+                </group>
+                <footer>
+                    <button name="import_product" string="Import" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+        <record id="gen_product_import_wizard" model="ir.actions.act_window">
+            <field name="name">Import Product</field>
+            <field name="res_model">gen.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+   <menuitem action="gen_product_import_wizard"
+    id="gen_product_wizard_import"
+     parent="sale.menu_sales_config"
+      />
+
+  </data>
+</openerp>
+ 

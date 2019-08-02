@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_config_settings_ua_vat" model="ir.ui.view">
+            <field name="name">account settings.ua_vat</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//t[@groups='account.group_account_user']" position="after">
+                    <h2>Облік ПДВ</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="comp_sti"/>
+                                <div>
+                                    <div>
+                                        <field name="comp_sti" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="kod_filii" />
+                                <div>
+                                    <div>
+                                        <field name="kod_filii" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vat_account_id" />
+                                <div>
+                                    <div>
+                                        <field name="vat_account_id" class="oe_inline" />
+                                    </div>
+                                </div>
+
+                                <label for="responsible_employee_id"/>
+                                <div>
+                                    <div>
+                                        <field name="responsible_employee_id" class="oe_inline"/>
+                                    </div>
+                                </div>
+                                <label for="company_full_name"/>
+                                <div>
+                                    <div>
+                                        <field name="company_full_name" class="oe_inline"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <label for="legal_status" />
+                                <div>
+                                    <div>
+                                        <field name="legal_status" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vat20_tax_tag_id" />
+                                <div>
+                                    <div>
+                                        <field name="vat20_tax_tag_id" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vat7_tax_tag_id" />
+                                <div>
+                                    <div>
+                                        <field name="vat7_tax_tag_id" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vat0_tax_tag_id" />
+                                <div>
+                                    <div>
+                                        <field name="vat0_tax_tag_id" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vatfree_tax_tag_id" />
+                                <div>
+                                    <div>
+                                        <field name="vatfree_tax_tag_id" class="oe_inline" />
+                                    </div>
+                                </div>
+                                <label for="vatnot_tax_tag_id" />
+                                <div>
+                                    <div>
+                                        <field name="vatnot_tax_tag_id" class="oe_inline" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

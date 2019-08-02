@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="0">
+
+    <record forcecreate="True" id="ir_cron_sync_nova_poshta_catalog" model="ir.cron">
+        <field name="name">Nova Poshta: synchronization of catalogs</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="model_id" ref="model_nova_poshta_config"/>
+        <field name="state">code</field>
+        <field name="code">model.sync_catalogs()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d 00:00:00')"/>
+    </record>
+
+    <record id="service_np_delivery" model="product.product">
+        <field name="name">Nova Poshta</field>
+        <field name="type">service</field>
+        <field name="default_code">Delivery</field>
+        <field name="sale_ok">True</field>
+        <field name="purchase_ok">False</field>
+        <field name="lst_price">0.0</field>
+    </record>
+
+    <record id="delivery_nova_poshta" model="delivery.carrier">
+        <field name="name">Nova Poshta</field>
+        <field name="delivery_type">fixed</field>
+        <field name="product_id" ref="nova_poshta_base.service_np_delivery"/>
+    </record>
+
+</odoo>
